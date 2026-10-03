@@ -2,200 +2,61 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
-<title>Марина Широкова - Маркетолог, продюсер, эксперт по внедрению ИИ</title>
-<meta name="description" content="Создаю международное комьюнити людей, которые растут вместе с передовыми технологиями. Учу внедрять искусственный интеллект в бизнес и жизнь.">
-<meta property="og:title" content="Марина Широкова - Маркетолог, продюсер, эксперт по внедрению ИИ">
-<meta property="og:description" content="Создаю международное комьюнити людей, которые растут вместе с передовыми технологиями. Учу внедрять искусственный интеллект в бизнес и жизнь.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Марина Широкова</title>
+<meta name="description" content="Марина Широкова - эксперт по работе с подсознанием и внедрению ИИ. Запись на личный разбор в Telegram.">
+<meta property="og:title" content="Марина Широкова">
+<meta property="og:description" content="Счастливая & Богатая & Любимая. Подсознание, состояние и ИИ для экспертов.">
 <meta property="og:image" content="photo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --h:320;
-  --bg:#07070c;
-  --ink:#f3f1ff;
-  --mute:#a9a6c2;
-  --a1:hsl(var(--h) 95% 66%);
-  --a2:hsl(calc(var(--h) + 50) 95% 62%);
-  --a3:hsl(calc(var(--h) - 40) 90% 60%);
-  --glass:rgba(255,255,255,.055);
-  --line:rgba(255,255,255,.11);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;line-height:1.1;letter-spacing:-.01em}
-a{color:inherit}
-.wrap{max-width:1160px;margin:0 auto;padding-inline:22px}
-
-/* aurora background */
-.aurora{position:fixed;inset:-20vmax;z-index:-2;filter:blur(70px) saturate(140%);opacity:.75}
-.aurora i{position:absolute;width:55vmax;height:55vmax;border-radius:50%;mix-blend-mode:screen;animation:drift 22s ease-in-out infinite alternate}
-.aurora i:nth-child(1){background:radial-gradient(circle,var(--a1),transparent 62%);top:0;left:0}
-.aurora i:nth-child(2){background:radial-gradient(circle,var(--a2),transparent 62%);top:20%;right:0;animation-duration:28s;animation-delay:-6s}
-.aurora i:nth-child(3){background:radial-gradient(circle,var(--a3),transparent 62%);bottom:0;left:25%;animation-duration:32s;animation-delay:-12s}
-@keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(8vmax,-6vmax) scale(1.15)}100%{transform:translate(-6vmax,7vmax) scale(.95)}}
-.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.veil{position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 0%,transparent 0%,rgba(7,7,12,.55) 55%,rgba(7,7,12,.92) 100%)}
-.cursor{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,hsl(var(--h) 95% 70% / .18),transparent 60%);transform:translate(-50%,-50%);transition:opacity .3s}
-
-/* nav */
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,7,12,.35);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font:700 15px Unbounded,sans-serif;letter-spacing:.04em}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:linear-gradient(120deg,var(--a1),var(--a2));color:#0b0b12;box-shadow:0 10px 40px -10px var(--a1);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
-.btn:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s ease-in-out infinite}
-@keyframes shine{60%,100%{transform:translateX(120%)}}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 50px -10px var(--a1)}
-.btn.sm{padding:10px 18px;font-size:14px}
-
-/* hero */
-.hero{min-height:min(calc(100vh - 64px),860px);display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-block:48px 70px}
-.tag{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--glass);color:var(--mute);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
-.hero h1{font-size:clamp(40px,6.4vw,84px);font-weight:800;margin-bottom:22px}
-.grad{background:linear-gradient(100deg,var(--a1),var(--a2),var(--a3),var(--a1));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 8s linear infinite}
-@keyframes flow{to{background-position:300% 0}}
-.hero p.lead{font-size:clamp(18px,2vw,22px);color:#d6d3ec;max-width:34ch;margin-bottom:34px}
-.hero .cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-.ghost{color:var(--mute);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
-.portrait{position:relative;aspect-ratio:4/5;max-width:440px;width:100%;justify-self:center}
-.portrait .ring{position:absolute;inset:-3px;border-radius:44% 56% 52% 48%/48% 44% 56% 52%;background:conic-gradient(from var(--ang),var(--a1),var(--a2),var(--a3),var(--a1));animation:ang 10s linear infinite,morph 14s ease-in-out infinite;filter:blur(1px)}
-.portrait .ring.glow{filter:blur(40px);opacity:.7}
-.portrait .disc{position:absolute;inset:6px;border-radius:44% 56% 52% 48%/48% 44% 56% 52%;overflow:hidden;background:radial-gradient(circle at 50% 35%,hsl(var(--h) 60% 22%),#0c0c16 70%);animation:morph 14s ease-in-out infinite}
-.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.04);transition:transform .2s}
-.portrait.cut img{object-fit:contain;object-position:50% 100%;top:6%;height:94%}
-@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
-@keyframes ang{to{--ang:360deg}}
-@keyframes morph{0%,100%{border-radius:44% 56% 52% 48%/48% 44% 56% 52%}50%{border-radius:56% 44% 46% 54%/54% 52% 48% 46%}}
-.badge{position:absolute;left:-18px;bottom:12%;padding:14px 18px;border-radius:18px;background:rgba(15,14,26,.72);border:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:float 6s ease-in-out infinite}
-.badge b{display:block;font:700 26px Unbounded,sans-serif}
-.badge span{color:var(--mute);font-size:13px}
-@keyframes float{50%{transform:translateY(-12px)}}
-
-/* marquee */
-.marquee{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:rgba(255,255,255,.02)}
-.marquee div{display:flex;gap:46px;width:max-content;animation:run 30s linear infinite;font:600 clamp(18px,2.4vw,26px) Unbounded,sans-serif;color:#cfcbe8}
-.marquee span:nth-child(even){color:var(--a1)}
-@keyframes run{to{transform:translateX(-50%)}}
-
-section{padding-block:100px}
-.kicker{color:var(--a1);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin-bottom:14px}
-h2{font-size:clamp(30px,4.2vw,52px);margin-bottom:46px;max-width:20ch}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{position:relative;padding:30px;border-radius:24px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .35s,border-color .35s;overflow:hidden}
-.card:before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--mx,50%) var(--my,0%),hsl(var(--h) 95% 70% / .16),transparent 45%);opacity:0;transition:opacity .35s}
-.card:hover{transform:translateY(-6px);border-color:hsl(var(--h) 95% 70% / .45)}
-.card:hover:before{opacity:1}
-.card .n{font:800 48px Unbounded,sans-serif;color:transparent;-webkit-text-stroke:1px hsl(var(--h) 95% 70% / .6);margin-bottom:12px}
-.card h3{font-size:20px;margin-bottom:10px}
-.card p{color:var(--mute)}
-.card .price{margin-top:18px;font:700 22px Unbounded,sans-serif}
-
-.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about p{font-size:19px;color:#d6d3ec;margin-bottom:16px}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.stat{padding:26px;border-radius:22px;background:var(--glass);border:1px solid var(--line)}
-.stat b{display:block;font:800 clamp(24px,2.8vw,38px) Unbounded,sans-serif;white-space:nowrap}
-.stat span{color:var(--mute);font-size:14px}
-
-.final{text-align:center;padding-block:120px 140px}
-.final h2{margin:0 auto 24px;max-width:18ch}
-.final p{color:var(--mute);margin-bottom:36px;font-size:19px}
-footer{border-top:1px solid var(--line);padding:26px 0 calc(26px + env(safe-area-inset-bottom,0px));color:var(--mute);font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(40px);filter:blur(8px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s}
-.rv.on{opacity:1;transform:none;filter:none}
-.split span{display:inline-block;opacity:0;transform:translateY(.6em) rotate(4deg);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
-@keyframes up{to{opacity:1;transform:none}}
-
-@media (max-width:860px){
-  .hero{grid-template-columns:1fr;min-height:auto;padding-block:28px 60px;text-align:left}
-  .portrait{max-width:330px;order:-1}
-  .grid3,.about{grid-template-columns:1fr}
-  section{padding-block:70px}
-  .badge{left:0}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none;filter:none}.split span{opacity:1;transform:none}}
+:root{--bg:#fbf4f7;--ink:#2a1622;--muted:#7a5f6d;--accent:#c2347f;--accent2:#e8a3c4;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(120% 80% at 50% 0%,#f7d9e8 0%,var(--bg) 60%);color:var(--ink);font:16px/1.55 Manrope,system-ui,sans-serif;display:flex;justify-content:center;padding:24px 16px 40px}
+.card{width:100%;max-width:440px;background:var(--card);border-radius:28px;box-shadow:0 20px 60px rgba(120,30,80,.15);overflow:hidden;text-align:center}
+.photo{background:linear-gradient(160deg,#f3c6dc,#c2347f);height:340px;display:flex;align-items:flex-end;justify-content:center}
+.photo img{height:100%;width:auto;object-fit:contain;object-position:bottom}
+.body{padding:26px 24px 30px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:#fbe6f0;border-radius:99px;padding:6px 12px}
+h1{font-family:Unbounded,Manrope,sans-serif;font-weight:800;font-size:30px;line-height:1.1;margin:14px 0 8px}
+.lead{color:var(--muted);margin:0 0 18px}
+ul{list-style:none;padding:0;margin:0 0 22px;text-align:left}
+li{padding:10px 0 10px 28px;border-top:1px solid #f3e3eb;position:relative}
+li:before{content:"";position:absolute;left:4px;top:18px;width:10px;height:10px;border-radius:50%;background:var(--accent2)}
+.stats{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 24px}
+.stat{flex:1 1 30%;background:#fbe6f0;border-radius:16px;padding:12px 6px}
+.stat b{display:block;font-family:Unbounded,sans-serif;font-size:18px;color:var(--accent)}
+.stat span{font-size:12px;color:var(--muted)}
+.btn{display:block;text-decoration:none;font-weight:700;border-radius:16px;padding:16px;margin-top:10px}
+.btn.main{background:var(--accent);color:#fff;font-size:17px}
+.btn.alt{background:#fff;color:var(--accent);border:2px solid var(--accent2)}
+.btn:active{transform:translateY(1px)}
+.foot{font-size:12px;color:var(--muted);margin-top:18px}
 </style>
 </head>
 <body>
-<div class="aurora"><i></i><i></i><i></i></div><div class="veil"></div><div class="grain"></div><div class="cursor" id="cur"></div>
-
-<nav><div class="wrap"><div class="logo">МАРИНА ШИРОКОВА</div><a class="btn sm" href="https://t.me/Marina_Shirokova888">Написать</a></div></nav>
-
-<header class="wrap hero">
-  <div>
-    <div class="tag rv">Маркетолог, продюсер, эксперт по внедрению ИИ</div>
-    <h1 class="split">Счастливые, богатые и любимые  <span class="grad">внедряют</span> <span class="grad">ИИ</span> <span class="grad">первыми</span></h1>
-    <p class="lead rv">Создаю международное комьюнити людей, которые растут вместе с передовыми технологиями. Учу внедрять искусственный интеллект в бизнес и жизнь.</p>
-    <div class="cta rv"><a class="btn" href="https://t.me/Marina_Shirokova888">Попасть в комьюнити &rarr;</a><a class="ghost" href="#services">Что я делаю</a></div>
+<main class="card">
+  <div class="photo"><img src="photo.webp" alt="Марина Широкова"></div>
+  <div class="body">
+    <span class="tag">Счастливая & Богатая & Любимая</span>
+    <h1>Марина Широкова</h1>
+    <p class="lead">Эксперт по работе с подсознанием. Проводник к жизни мечты через состояние и мышление.</p>
+    <ul>
+      <li>Практики и разборы для амбициозных экспертов, которые хотят масштабироваться</li>
+      <li>AI-бизнес-академия: 30 дней, 80% практики - от нуля до первых продаж</li>
+      <li>Нейро-марафоны: контент, видео и AI-боты, которые приводят клиентов</li>
+    </ul>
+    <div class="stats">
+      <div class="stat"><b>1,2 млн+</b><span>органических просмотров</span></div>
+      <div class="stat"><b>100+</b><span>человек в команде</span></div>
+      <div class="stat"><b>4+</b><span>AI-агента в проектах</span></div>
+    </div>
+    <a class="btn main" href="https://t.me/Marina_Shirokova888">Записаться на личный разбор</a>
+    <a class="btn alt" href="https://t.me/Marina_sheee">Канал в Telegram</a>
+    <p class="foot">Telegram: @Marina_Shirokova888</p>
   </div>
-  <div class="portrait rv cut" id="pt">
-    <div class="ring glow"></div><div class="ring"></div>
-    <div class="disc"><img src="photo.webp" alt="Марина Широкова"></div>
-    <div class="badge"><b>ИИ</b><span>бизнес-академия и комьюнити</span></div>
-  </div>
-</header>
-
-<div class="marquee"><div><span>Комьюнити</span><span>&#10022;</span><span>ИИ-агенты</span><span>&#10022;</span><span>Бизнес-академия</span><span>&#10022;</span><span>Генерация контента</span><span>&#10022;</span><span>Маркетинг</span><span>&#10022;</span><span>Продюсирование</span><span>&#10022;</span><span>Комьюнити</span><span>&#10022;</span><span>ИИ-агенты</span><span>&#10022;</span><span>Бизнес-академия</span><span>&#10022;</span><span>Генерация контента</span><span>&#10022;</span><span>Маркетинг</span><span>&#10022;</span><span>Продюсирование</span><span>&#10022;</span></div></div>
-
-<section class="wrap">
-  <div class="kicker rv">Узнаёте себя?</div>
-  <h2 class="rv">Технологии несутся, а вы смотрите со стороны</h2>
-  <div class="grid3"><div class="card rv"><div class="n">01</div><h3>Не знаете, с чего начать</h3><p>Нейросетей сотни, и непонятно, какая нужна именно вам.</p></div><div class="card rv"><div class="n">02</div><h3>Контент отнимает всё время</h3><p>Тексты, картинки, видео - руками, по ночам, без системы.</p></div><div class="card rv"><div class="n">03</div><h3>Рядом нет своих людей</h3><p>Не с кем обсудить идеи и расти вместе.</p></div></div>
-</section>
-
-<section class="wrap" id="services">
-  <div class="kicker rv">Чем помогаю</div>
-  <h2 class="rv">Что я даю</h2>
-  <div class="grid3"><div class="card rv"><div class="n">01</div><h3>Международное комьюнити</h3><p>Счастливые, богатые и любимые люди, которые внедряют передовые технологии.</p><div class="price grad">вступить</div></div><div class="card rv"><div class="n">02</div><h3>Бизнес-академия по ИИ</h3><p>Обучение внедрению искусственного интеллекта в ваш бизнес.</p><div class="price grad">обучение</div></div><div class="card rv"><div class="n">03</div><h3>Инструменты и платформы</h3><p>Приложения, где создают агентов и генерируют контент.</p><div class="price grad">доступ</div></div></div>
-</section>
-
-<section class="wrap about">
-  <div>
-    <div class="kicker rv">Обо мне</div>
-    <h2 class="rv" style="margin-bottom:26px">Маркетолог и продюсер, который говорит на языке ИИ</h2>
-    <p class="rv">Маркетолог и продюсер. Специалист по внедрению искусственного интеллекта.</p><p class="rv">Строю большое международное комьюнити и бизнес-академию, где технологии работают на людей.</p>
-  </div>
-  <div class="stats"><div class="stat rv"><b class="grad">ИИ</b><span>внедрение под ключ</span></div><div class="stat rv"><b class="grad">Мир</b><span>международное комьюнити</span></div><div class="stat rv"><b class="grad">Агенты</b><span>создаём своих</span></div><div class="stat rv"><b class="grad">Контент</b><span>генерим за минуты</span></div></div>
-</section>
-
-<section class="wrap final">
-  <div class="kicker rv">Первый шаг</div>
-  <h2 class="rv"><span class="grad">Присоединяйтесь к комьюнити</span></h2>
-  <p class="rv">Напишите мне - расскажу, как внедрить ИИ в ваш бизнес и жизнь.</p>
-  <a class="btn rv" href="https://t.me/Marina_Shirokova888">Попасть в комьюнити &rarr;</a>
-</section>
-
-<footer><div class="wrap"><span>&copy; 2026 Марина Широкова</span><span>Сайт собран ИИ-отделом за 10 минут &middot; <a href="https://ai.grmv8.ru">ai.grmv8.ru</a></span></div></footer>
-
-<script>
-(function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
-  document.querySelectorAll('.split').forEach(function(h){
-    var parts=h.innerHTML.match(/<span class="grad">[\s\S]*?<\/span>|<br\s*\/?>|[^\s<]+/g)||[],html='',d=0;
-    parts.forEach(function(t){
-      if(/^<br/.test(t)){html+=t;return}
-      html+='<span style="animation-delay:'+(0.15+d*0.07)+'s">'+t+'</span> ';d++;
-    });
-    h.innerHTML=html;
-  });
-  var cur=document.getElementById('cur'),pt=document.getElementById('pt');
-  if(matchMedia('(pointer:fine)').matches){
-    addEventListener('pointermove',function(e){
-      cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
-      var r=pt.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)/r.width,y=(e.clientY-r.top-r.height/2)/r.height;
-      pt.style.transform='perspective(900px) rotateY('+(x*8)+'deg) rotateX('+(-y*8)+'deg)';
-    });
-  } else cur.style.opacity=0;
-  document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
-})();
-</script>
+</main>
 </body>
 </html>
