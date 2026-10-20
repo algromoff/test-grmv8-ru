@@ -98,7 +98,13 @@ section{padding-block:72px}
 blockquote{margin:24px 0 0;padding:20px 24px;border-left:4px solid var(--sand);background:var(--sand-l);border-radius:0 10px 10px 0;color:var(--ink);font-size:18px}
 
 /* case */
-.case{background:var(--white);border:1px dashed var(--g3);border-radius:var(--r);padding:28px}
+.case{background:var(--white);border:1px solid var(--g1);border-radius:var(--r);padding:28px}
+.case h3{margin:0}
+.case-sub{color:var(--muted);font-size:15px;margin-top:4px}
+.case-step{margin-top:16px}
+.case-step b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--indigo);margin-bottom:4px}
+.case-step p{margin:0 0 8px}
+.cases{display:grid;gap:24px}
 .todo{display:inline-block;background:#fff3cd;color:#7a5b10;font-size:13px;padding:3px 9px;border-radius:6px;font-weight:600}
 
 /* faq */
