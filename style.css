@@ -220,3 +220,16 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 .scard .btn{text-align:center}
 @media (max-width:960px){.postgrid,.pin{grid-template-columns:1fr}.side{position:static}.plist{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.plist{grid-template-columns:1fr}}
+/* video article */
+.vvid{max-width:360px;margin:8px 0 18px}
+.vvid video{width:100%;height:auto;aspect-ratio:9/16;border-radius:14px;background:#1d2544;display:block}
+.vanswer{background:var(--bg);border-left:4px solid var(--indigo);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 18px}
+.chapters{border:1px solid var(--g2);border-radius:12px;padding:14px 18px;margin:0 0 22px}
+.chapters ol{list-style:none;margin:8px 0 0;padding:0}
+.chapters li{margin:4px 0}
+.chapters a{text-decoration:none;color:inherit;display:flex;gap:12px}
+.chapters a:hover{color:var(--indigo)}
+.chapters span{font-variant-numeric:tabular-nums;color:var(--indigo);font-weight:700;min-width:38px}
+.faq{border-bottom:1px solid var(--g2);padding:12px 0}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin:8px 0 0}
