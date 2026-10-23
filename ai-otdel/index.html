@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Meta -->
+    <title>ИИ-отдел под ключ | Собираем и ведём мы, вы ставите задачи</title>
+    <meta name="description" content="Собираем ИИ-отдел под ваш бизнес и ведём его сами. Десять ролей в одном контуре: разработка, сайты, аналитика, тексты, рассылки, поддержка клиентов. Вы ставите задачи в Telegram и получаете результат.">
+    <meta name="keywords" content="ии отдел, нейроотдел, ии агент, джарвис, автоматизация бизнеса, интеграция ии, ии сотрудник">
+
+    <link rel="canonical" href="https://ai.grmv8.ru/">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="ИИ-отдел под ключ | Собираем и ведём мы">
+    <meta property="og:description" content="Отдел из ИИ-сотрудников работает круглосуточно и закрывает работу десяти специалистов. Вы ставите задачи, остальное на нас.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai.grmv8.ru/">
+    <meta property="og:site_name" content="ИИ-отдел под ключ">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="https://ai.grmv8.ru/assets/img/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ИИ-отдел под ключ: десять ролей в одном контуре">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ИИ-отдел под ключ | Собираем и ведём мы">
+    <meta name="twitter:description" content="Десять ролей в одном контуре: разработка, сайты, аналитика, тексты, рассылки, поддержка клиентов. Вы ставите задачи в Telegram.">
+    <meta name="twitter:image" content="https://ai.grmv8.ru/assets/img/og-cover.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs><linearGradient id='grad' x1='0%25' y1='100%25' x2='100%25' y2='0%25'><stop offset='0%25' stop-color='%2300D9FF'/><stop offset='50%25' stop-color='%237C3AED'/><stop offset='100%25' stop-color='%23EC4899'/></linearGradient></defs><path fill='url(%23grad)' d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#000000',
+                            card: '#121212',
+                            border: '#262626',
+                            aiCyan: '#00D9FF',
+                            aiViolet: '#7C3AED',
+                            aiMagenta: '#EC4899',
+                            aiGreen: '#22C55E'
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-glow': 'radial-gradient(circle at 50% -20%, rgba(124, 58, 237, 0.18) 0%, rgba(0, 0, 0, 0) 60%)',
+                        'ai-gradient': 'linear-gradient(45deg, #00D9FF 0%, #7C3AED 50%, #EC4899 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B0B18;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+        /* Мягкая подсветка всего полотна, чтобы страница не читалась как чёрная */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            pointer-events: none;
+            background:
+                radial-gradient(1000px 700px at 12% -5%, rgba(124, 58, 237, 0.30), transparent 65%),
+                radial-gradient(900px 600px at 88% 8%, rgba(0, 217, 255, 0.20), transparent 62%),
+                radial-gradient(1100px 800px at 50% 105%, rgba(236, 72, 153, 0.18), transparent 68%),
+                linear-gradient(180deg, #12122A 0%, #0B0B18 55%, #14102A 100%);
+        }
+
+        .glass {
+            background: rgba(32, 30, 58, 0.52);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        /* Карточка приподнимается под курсором — как на tr6.ru */
+        .card {
+            position: relative;
+            background: linear-gradient(145deg, rgba(58, 46, 102, 0.55) 0%, rgba(20, 18, 38, 0.82) 100%);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 217, 255, 0.50);
+            box-shadow: 0 18px 60px rgba(124, 58, 237, 0.30);
+        }
+        /* Свет идёт за курсором по карточке */
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(0, 217, 255, 0.16), transparent 55%);
+        }
+        .card:hover::after { opacity: 1; }
+
+        /* Голубая кнопка тарифа в общей гамме */
+        .btn-cyan {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.18) 0%, rgba(124, 58, 237, 0.22) 100%);
+            border: 1px solid rgba(0, 217, 255, 0.55);
+            transition: all 0.3s ease;
+        }
+        .btn-cyan:hover {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.30) 0%, rgba(124, 58, 237, 0.34) 100%);
+            box-shadow: 0 4px 24px rgba(0, 217, 255, 0.35);
+            transform: translateY(-2px);
+        }
+
+        /* Липкая шапка */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -6px;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, #00D9FF, #7C3AED);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Бесконечная лента ролей */
+        .marquee-wrapper {
+            overflow: hidden;
+            position: relative;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+        }
+        .marquee-container {
+            display: flex;
+            width: max-content;
+            animation: marquee 28s linear infinite;
+        }
+        .marquee-container:hover { animation-play-state: paused; }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: perspective(1200px) rotateY(-7deg) rotateX(3deg) translateY(0); }
+            50%      { transform: perspective(1200px) rotateY(-7deg) rotateX(3deg) translateY(-12px); }
+        }
+
+        /* Градиент в заголовках живой: перетекает слева направо */
+        .text-gradient {
+            background: linear-gradient(110deg, #00D9FF, #7C3AED, #EC4899, #00D9FF);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-flow 9s linear infinite;
+        }
+        @keyframes gradient-flow {
+            0%   { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .text-gradient { animation: none; }
+        }
+
+        /* Крупные цифры светятся и оживают при появлении */
+        .stat-num {
+            text-shadow: 0 0 28px rgba(0, 217, 255, 0.35);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 55%, #EC4899 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Telegram chat mockup */
+        .tg-window {
+            background: rgba(14, 22, 33, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 1.25rem;
+            border: 1px solid #26323f;
+            overflow: hidden;
+            box-shadow: 0 30px 60px -20px rgba(124, 58, 237, 0.35);
+            animation: float 7s ease-in-out infinite;
+        }
+        @media (max-width: 767px) { .tg-window { animation: none; transform: none; } }
+        .tg-bubble-in {
+            background: #182533;
+            color: #e9edef;
+            border-radius: 14px 14px 14px 2px;
+        }
+        .tg-bubble-out {
+            background: linear-gradient(135deg, #00D9FF15, #7C3AED30);
+            border: 1px solid #7C3AED55;
+            color: #e9edef;
+            border-radius: 14px 14px 2px 14px;
+        }
+        .typing-dot {
+            animation: blink 1.4s infinite both;
+        }
+        .typing-dot:nth-child(2) { animation-delay: .2s; }
+        .typing-dot:nth-child(3) { animation-delay: .4s; }
+        @keyframes blink { 0%, 80%, 100% { opacity: .2; } 40% { opacity: 1; } }
+    </style>
+
+    <!-- Структурированные данные: организация, две услуги с ценами, адаптер,
+         вопросы. Из FAQPage поисковые ассистенты берут прямые ответы, поэтому
+         формулировки здесь совпадают с блоком вопросов на странице. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://ai.grmv8.ru/#org",
+          "name": "ИИ-отдел под ключ",
+          "url": "https://ai.grmv8.ru/",
+          "image": "https://ai.grmv8.ru/assets/img/og-cover.jpg",
+          "description": "Собираем ИИ-отдел под задачи бизнеса и ведём его сами. Десять ролей в одном контуре: разработка, сайты, аналитика, тексты, рассылки, поддержка клиентов.",
+          "areaServed": "RU",
+          "priceRange": "19900-170000 RUB",
+          "founder": { "@type": "Person", "name": "Александр Громов" },
+          "sameAs": ["https://t.me/LubovForte"]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://ai.grmv8.ru/#page",
+          "url": "https://ai.grmv8.ru/",
+          "name": "ИИ-отдел под ключ | Собираем и ведём мы, вы ставите задачи",
+          "inLanguage": "ru-RU",
+          "dateModified": "2026-10-20",
+          "isPartOf": { "@id": "https://ai.grmv8.ru/#org" }
+        },
+        {
+          "@type": "Service",
+          "name": "ИИ-отдел под ключ",
+          "serviceType": "Интеграция и ведение отдела ИИ-агентов",
+          "provider": { "@id": "https://ai.grmv8.ru/#org" },
+          "description": "Аккаунты, подписки на ИИ, сервер и настройку берём на себя и отдаём работающий инструмент, который ещё месяц донастраиваем под заказчика. Дальше постоянная поддержка и техобслуживание.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Установка, первый платёж",
+              "price": "80000",
+              "priceCurrency": "RUB",
+              "url": "https://ai.grmv8.ru/#tariffs",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Аренда и техобслуживание, месяц",
+              "price": "15000",
+              "priceCurrency": "RUB",
+              "url": "https://ai.grmv8.ru/#tariffs",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "ИИ-отдел, бизнес класс",
+          "serviceType": "Интеграция и ведение отдела ИИ-агентов",
+          "provider": { "@id": "https://ai.grmv8.ru/#org" },
+          "description": "Всё, что в тарифе «под ключ», плюс дополнительный агент на ChatGPT для независимого второго мнения и проверки на критичных задачах, и расширенные подписки: видео, графика, верификация.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Установка, первый платёж",
+              "price": "120000",
+              "priceCurrency": "RUB",
+              "url": "https://ai.grmv8.ru/#tariffs",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Аренда и техобслуживание, месяц",
+              "price": "20000",
+              "priceCurrency": "RUB",
+              "url": "https://ai.grmv8.ru/#tariffs",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "ИИ-отдел в собственность",
+          "serviceType": "Установка отдела ИИ-агентов с передачей заказчику",
+          "provider": { "@id": "https://ai.grmv8.ru/#org" },
+          "description": "Всё, что в бизнес классе, плюс телеграм-адаптер и парсер Telegram-каналов. Устанавливаем на сервер и за месяц сопровождения передаём заказчику все доступы, скиллы, настройки, аккаунты и оплаты.",
+          "offers": {
+            "@type": "Offer",
+            "price": "170000",
+            "priceCurrency": "RUB",
+            "url": "https://ai.grmv8.ru/#tariffs",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Телеграм-адаптер к ИИ-отделу",
+          "serviceType": "Дополнение к тарифам ИИ-отдела",
+          "provider": { "@id": "https://ai.grmv8.ru/#org" },
+          "description": "Агент управляет обычным аккаунтом Telegram: пишет и читает от имени владельца, ведёт переписку с клиентами, разбирает чаты и каналы, собирает упоминания. Ставится за один день.",
+          "offers": {
+            "@type": "Offer",
+            "price": "19900",
+            "priceCurrency": "RUB",
+            "url": "https://ai.grmv8.ru/#tariffs",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ai.grmv8.ru/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "А чем вообще отличаются сотни предложений агентов на рынке?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Большинство предложений продают инструмент: ролик с установкой, подписку на готового агента или курс. Агент у вас появится, но что он будет делать в вашем бизнесе, придётся придумывать и проверять самому. В подписку к тому же входит ограниченный запас токенов, и каждое действие сверх лимита оплачивается отдельно. Мы отдаём 10 ролей, которые сначала собрали для собственного бизнеса и проверили на живых клиентах: 370 задач за два месяца, 270+ оплат без человека в переписке. Теоретических решений не продаём - только то, чем сами пользуемся каждый день. Сравнение по пунктам - в блоке «Поставить агента сейчас может каждый» выше."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Нужно ли что-то уметь и устанавливать?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "На тарифах «Под ключ» и «Бизнес класс» - нет. Сборку, настройку и обслуживание делаем мы. От вас нужен разговор о задачах на старте и ответы на уточняющие вопросы дальше. Работа с отделом выглядит как переписка в Telegram."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Чем отличаются тарифы?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "«Под ключ» - не заморачиваетесь ничем: аккаунты, подписки на ИИ, сервер и настройку делаем мы, отдаём работающий инструмент и ещё месяц донастраиваем его под вас, дальше постоянная поддержка. «Бизнес класс» - всё то же плюс дополнительный агент на ChatGPT: он даёт независимое второе мнение и перепроверяет работу на критичных задачах. И расширенные подписки на видео и графику. «В собственность» - всё, что в «Бизнес классе», плюс телеграм-адаптер и парсер Telegram-каналов: ставим на сервер и за месяц сопровождения передаём вам все доступы, скиллы, настройки, аккаунты и оплаты."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Сколько ждать до первого результата?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Неделя от старта до работающего отдела. Первые задачи он берёт сразу после передачи доступа, дальше месяц уходит на то, чтобы он выучил ваши процессы и перестал переспрашивать очевидное."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "А если сервер упадёт или агент сломается?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "В контуре стоит второй агент-сторож: он молчит, пока всё работает, и поднимает основного, когда тот лёг. На тарифах «Под ключ» и «Бизнес класс» разбор сбоев на нас всё время работы, на тарифе «В собственность» - месяц сопровождения до передачи."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Что даёт телеграм-адаптер и зачем он нужен?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Обычный бот пишет только тем, кто сам ему написал. Адаптер даёт отделу доступ к вашему личному аккаунту: он может вести переписку от вашего имени, читать и разбирать чаты и каналы, собирать нужное из сообществ и связываться с людьми по списку. Стоит 19 900 рублей и ставится за день."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Чем это лучше конструктора вроде Manychat?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Конструктор работает по заранее собранным сценариям и дорожает вместе с числом сообщений. Отдел стоит на собственном сервере, помнит контекст, сам пишет и запускает код, собирает сайты и разбирает данные. Новые задачи не упираются в тариф."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Кому отдел не подойдёт?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Тем, у кого нет повторяющихся задач: если работа разовая и раз в квартал, дешевле нанять подрядчика под конкретный проект. Отдел окупается там, где задачи идут потоком - контент, клиенты, сайты, аналитика, переписка."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+</head>
+<body class="antialiased pb-safe selection:bg-brand-aiViolet selection:text-white">
+
+    <!-- Интерактивная нейросеть на фоне (перенесена с tr6.ru, перекрашена) -->
+    <canvas id="neuralMesh" class="fixed inset-0 w-full h-full pointer-events-none z-[-2]"></canvas>
+
+    <!-- Постоянные свечения -->
+    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-brand-aiViolet/20 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-brand-aiCyan/10 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+    <div class="fixed top-[35%] right-[8%] w-[40%] h-[40%] bg-brand-aiMagenta/10 rounded-full blur-[150px] pointer-events-none z-[-1] animate-pulse"></div>
+
+    <!-- Липкая шапка -->
+    <nav id="navbar" class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <a href="#hero" class="flex items-center gap-2 shrink-0">
+                    <div class="w-9 h-9 rounded-xl bg-ai-gradient flex items-center justify-center font-extrabold text-white text-sm">Д</div>
+                    <span class="font-extrabold tracking-tight text-white">ИИ-отдел</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
+                    <a href="#result" class="nav-link hover:text-white">Что получаете</a>
+                    <a href="#proof" class="nav-link hover:text-white">Факты</a>
+                    <a href="#timeline" class="nav-link hover:text-white">Как работаем</a>
+                    <a href="#roles" class="nav-link hover:text-white">Роли</a>
+                    <a href="#tariffs" class="nav-link hover:text-white">Тарифы</a>
+                    <a href="#faq" class="nav-link hover:text-white">Вопросы</a>
+                </div>
+                <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=header" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl btn-gradient text-white text-xs md:text-sm font-bold shadow-lg whitespace-nowrap">Обсудить задачу</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sticky Mobile CTA -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 w-full z-50 bg-[#000000]/90 backdrop-blur-md border-t border-brand-border p-3 transform translate-y-full transition-transform duration-300 md:hidden">
+        <a href="#tariffs" class="w-full flex items-center justify-center text-center py-3 rounded-xl btn-gradient text-xs font-bold uppercase shadow-lg text-white" data-price="jarvis-turnkey" data-price-prefix="Поставить ИИ-отдел - от ">Поставить ИИ-отдел - от 80 000₽</a>
+    </div>
+
+    <!-- 1. HERO -->
+    <header id="hero" class="relative min-h-[92vh] flex items-center justify-center pt-32 md:pt-28 pb-12 overflow-hidden">
+        <div class="absolute inset-0 bg-hero-glow"></div>
+        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-brand-aiViolet rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-brand-aiCyan rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-6xl">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-up">
+                    <span class="inline-block py-1.5 px-4 rounded-full border border-white/10 bg-[#121212] text-xs font-semibold tracking-wider uppercase mb-6 text-gray-300 shadow-xl">
+                        <span class="w-2 h-2 rounded-full bg-brand-aiGreen inline-block mr-2 animate-pulse"></span> интеграция · неделя до запуска · месяц сопровождения
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white">
+                        ИИ-отдел под ваш бизнес. <span class="text-gradient">Собираем и ведём мы, вы ставите задачи</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
+                        <span class="hidden md:inline">Вы не устанавливаете ничего и не учитесь работать с кодом. Мы разворачиваем контур, обучаем агентов под ваши процессы и сопровождаем. </span>Вы пишете задачу в Telegram и получаете готовый результат: сайт, бота, разбор конкурентов, тексты<span class="md:hidden">, аналитику.</span><span class="hidden md:inline">, отчёт, автоворонку, аналитику, презентацию в вашем стиле, тг-канал с вашим курсом, разбитый по блокам, дням и урокам.</span>
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-2 mb-8 font-mono text-xs text-gray-400">
+                        <span><span class="text-white font-bold">10 ролей</span> закрывает отдел</span>
+                        <span class="text-gray-700">·</span>
+                        <span><span class="text-white font-bold">неделя</span> до запуска</span>
+                        <span class="text-gray-700">·</span>
+                        <span><span class="text-white font-bold">24/7</span> без выходных и отпусков</span>
+                    </div>
+
+                    <div class="hidden md:grid md:grid-cols-3 gap-3 mb-8">
+                        <div class="glass card rounded-2xl p-4">
+                            <div class="text-white font-bold mb-1">Делает</div>
+                            <div class="text-gray-400 text-xs leading-relaxed">Не советует, а выполняет работу целиком: код, сайты, публикации, аналитика.</div>
+                        </div>
+                        <div class="glass card rounded-2xl p-4">
+                            <div class="text-white font-bold mb-1">Ведём мы</div>
+                            <div class="text-gray-400 text-xs leading-relaxed">Сервер, обновления, сбои и обучение агентов на нашей стороне.</div>
+                        </div>
+                        <div class="glass card rounded-2xl p-4">
+                            <div class="text-white font-bold mb-1">Под вас</div>
+                            <div class="text-gray-400 text-xs leading-relaxed">Месяц доучиваем отдел под ваши процессы и вашу манеру ставить задачи.</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                        <a href="#tariffs" class="px-8 py-4 rounded-xl font-bold btn-gradient shadow-[0_4px_20px_rgba(124,58,237,0.3)] hover:shadow-[0_4px_25px_rgba(124,58,237,0.5)] transition-all flex items-center justify-center gap-2 text-white">
+                            Поставить ИИ-отдел
+                        </a>
+                        <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=hero" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl font-bold bg-[#2AABEE] hover:bg-[#2298D6] shadow-[0_4px_20px_rgba(42,171,238,0.35)] hover:shadow-[0_4px_25px_rgba(42,171,238,0.55)] transition-all flex items-center justify-center gap-2 text-white">
+                            Задать вопрос в Telegram
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-3">Без обязательств купить. Расскажем, как это устроено, и посоветуем под ваш случай.</p>
+                    <p class="text-xs text-gray-500 mt-1">Можно начать так: «Хочу понять, подойдёт ли мне ИИ-отдел. Мои задачи: ...»</p>
+                    <p class="text-xs text-gray-500 mt-4 opacity-70">под ключ от 80 000₽ и 15 000₽/мес за обслуживание · в собственность 170 000₽</p>
+                    <p class="text-sm text-brand-aiGreen font-semibold mt-2">Не окупится вдвое за месяц - второй месяц бесплатно</p>
+                </div>
+
+                <!-- Telegram mockup -->
+                <div data-aos="fade-left" data-aos-delay="150">
+                    <div class="tg-window shadow-2xl max-w-md mx-auto">
+                        <div class="flex items-center gap-3 px-4 py-3 border-b border-[#26323f] bg-[#17212b]">
+                            <div class="w-9 h-9 rounded-full bg-ai-gradient flex items-center justify-center font-bold text-sm">Д</div>
+                            <div>
+                                <div class="font-semibold text-white text-sm">Ваш ИИ-отдел</div>
+                                <div class="text-[11px] text-brand-aiGreen">в сети</div>
+                            </div>
+                        </div>
+                        <div class="p-4 space-y-3 font-mono text-[13px]">
+                            <div class="tg-bubble-out px-3 py-2 max-w-[85%] ml-auto">🎤 голосовое 0:38 - «нужен лендинг под мой курс, дизайн вот такой» + ссылка</div>
+                            <div class="tg-bubble-in px-3 py-2 max-w-[85%]">Расшифровал. Разбираю референс, собираю структуру и тексты.</div>
+                            <div class="tg-bubble-in px-3 py-2 max-w-[85%] flex gap-1">
+                                <span class="typing-dot">●</span><span class="typing-dot">●</span><span class="typing-dot">●</span>
+                            </div>
+                            <div class="tg-bubble-in px-3 py-2 max-w-[85%]">Готово, 15 минут. Сайт собран и уже открывается по ссылке. Что правим?</div>
+                        </div>
+                        <div class="px-4 pb-4 -mt-1 font-mono text-[11px] text-brand-aiGreen">15 минут вместо двух недель и счёта на 50 000₽
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. ДЛЯ КОГО И В ЧЁМ БОЛЬ -->
+    <section id="audience" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Знакомо, если работа <span class="text-gradient">упирается в подрядчиков</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Задач много, каждая требует своего специалиста, и каждый выставляет отдельный счёт и отдельный срок.</p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-16">
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="50">
+                    <p class="text-gray-300">Сайт нужен был вчера, а подрядчик отвечает раз в сутки и просит ещё две недели на согласования.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-gray-300">Клиенты пишут ночью и в выходные, а отвечать некому до понедельника.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="150">
+                    <p class="text-gray-300">Каждая мелочь - новый счёт: пост, разбор конкурентов, правка на сайте, выгрузка базы.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-gray-300">Нанимать в штат не окупается, а держать в голове пятерых подрядчиков - отдельная работа.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Предприниматели</h3>
+                    <p class="text-gray-400 text-sm">Закрывают одним отделом задачи, под которые раньше нанимали нескольких людей - от сайта до аналитики и поддержки клиентов.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl mb-4">📹</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Эксперты и блогеры</h3>
+                    <p class="text-gray-400 text-sm">Переводят контент, воронку и переписку с клиентами на отдел и освобождают себе время на сам продукт.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl mb-4">🛠️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Агентства и студии</h3>
+                    <p class="text-gray-400 text-sm">Обслуживают больше клиентов без расширения команды - рутина уходит отделу, люди остаются на смысле.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ПОЧЕМУ СТАРОЕ РЕШЕНИЕ НЕ РАБОТАЕТ -->
+    <section id="why" class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Штат, подрядчики <span class="text-gradient">или ИИ-отдел</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Один и тот же объём работы, три способа его закрыть. Цифры - медианы открытого рынка на сентябрь 2026.</p>
+
+            <div class="grid lg:grid-cols-3 gap-6 items-stretch">
+                <div class="glass card rounded-3xl p-8 flex flex-col" data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-6 opacity-60">
+                        <span class="text-2xl">🧑‍🤝‍🧑</span>
+                        <h3 class="text-xl font-semibold text-gray-400">Штат</h3>
+                    </div>
+                    <div class="text-2xl font-extrabold text-white mb-1">1,9-2,1 млн ₽</div>
+                    <div class="text-xs text-gray-500 mb-6">в месяц, со взносами и накладными</div>
+                    <ul class="space-y-3 text-gray-400 text-sm flex-grow">
+                        <li class="flex gap-3">✕ <span>Десять человек, которых нужно найти и удержать</span></li>
+                        <li class="flex gap-3">✕ <span>Отпуска, больничные, текучка и новое обучение по кругу</span></li>
+                        <li class="flex gap-3">✕ <span>Платите за присутствие, а не за сделанное</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass card rounded-3xl p-8 flex flex-col" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-6 opacity-60">
+                        <span class="text-2xl">🧾</span>
+                        <h3 class="text-xl font-semibold text-gray-400">Подрядчики</h3>
+                    </div>
+                    <div class="text-2xl font-extrabold text-white mb-1">1,0-1,7 млн ₽</div>
+                    <div class="text-xs text-gray-500 mb-6">в месяц за тот же объём работ</div>
+                    <ul class="space-y-3 text-gray-400 text-sm flex-grow">
+                        <li class="flex gap-3">✕ <span>Десять исполнителей, и каждого надо свести с остальными</span></li>
+                        <li class="flex gap-3">✕ <span>Сроки плавают, качество проверяете вы сами</span></li>
+                        <li class="flex gap-3">✕ <span>Отдельный счёт за каждую задачу и каждую правку</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass card rounded-3xl p-8 flex flex-col relative overflow-hidden" style="border: 1px solid #7C3AED55;" data-aos="fade-left">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-aiViolet/10 blur-[50px] rounded-full"></div>
+                    <div class="flex items-center gap-3 mb-6 relative z-10">
+                        <span class="text-2xl">⚡</span>
+                        <h3 class="text-2xl font-bold text-white">ИИ-отдел</h3>
+                    </div>
+                    <div class="text-2xl font-extrabold text-white mb-1 relative z-10">от 15 000₽/мес + подписки</div>
+                    <div class="text-xs text-gray-400 mb-6 relative z-10">после установки: аренда и техобслуживание, подписки на ИИ - по факту</div>
+                    <ul class="space-y-3 text-gray-200 text-sm font-medium flex-grow relative z-10">
+                        <li class="flex gap-3">✓ <span>Десять ролей в одном контуре, один ответственный - мы</span></li>
+                        <li class="flex gap-3">✓ <span>Работает ночью, в выходные и в праздники</span></li>
+                        <li class="flex gap-3">✓ <span>Цена не растёт вместе с числом задач</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-gray-400 text-lg" data-aos="fade-up">
+                Разница не в цене инструмента. <span class="text-white font-semibold border-b border-brand-aiViolet pb-1">Разница в том, что отдел уже собран и обкатан на боевых задачах.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ДОКАЗАТЕЛЬСТВА -->
+    <section id="proof" class="py-20 bg-[#121212]/50 relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-5xl relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Это не теория - <span class="text-gradient">это уже так работает</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Мы продаём тот отдел, на котором работаем сами. Цифры ниже - факт за два месяца, а не прогноз.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12" data-aos="fade-up">
+                <div class="glass card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-gradient mb-2 stat-num" data-count="370">370</div>
+                    <div class="text-gray-400 text-xs">задач закрыто за два месяца</div>
+                </div>
+                <div class="glass card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-gradient mb-2 stat-num" data-count="500 000₽+">500 000₽+</div>
+                    <div class="text-gray-400 text-xs">автоворонка и продукты за август и сентябрь</div>
+                </div>
+                <div class="glass card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-gradient mb-2 stat-num" data-count="3 700+">3 700+</div>
+                    <div class="text-gray-400 text-xs">лидов привлечено и обработано</div>
+                </div>
+                <div class="glass card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-extrabold text-gradient mb-2 stat-num" data-count="10">10</div>
+                    <div class="text-gray-400 text-xs">ролей закрывает отдел</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="text-lg font-bold text-white mb-3">Аналитика</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>18 технических аудитов сайтов: индексация, скорость, семантика, видимость в ИИ-поиске</li>
+                        <li>9 аудитов соцсетей и точек входа</li>
+                        <li>4 глубоких аудита позиционирования эксперта</li>
+                        <li>Расшифровка созвонов по базе из 30 клиентов с крупными чеками</li>
+                    </ul>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-bold text-white mb-3">Продажи</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Автоворонка полного цикла: 270+ оплат без человека в переписке</li>
+                        <li>7 рекламных кампаний с сегментацией базы и дожимными механиками</li>
+                        <li>5 мини-продуктов собрано и запущено</li>
+                        <li>11 персональных коммерческих предложений</li>
+                    </ul>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="150">
+                    <h3 class="text-lg font-bold text-white mb-3">Разработка</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>5 ботов и мини-приложений, включая рабочую панель с карточкой клиента</li>
+                        <li>4 сайта и лендинга</li>
+                        <li>Недельный курс целиком: программа, уроки, лендинг, оплата, выдача доступа</li>
+                        <li>Два выделенных сервера на Unix и десяток сайтов в одном контуре</li>
+                    </ul>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-bold text-white mb-3">Поддержка клиентов</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>До 440 входящих сообщений в сутки отдел разбирает сам</li>
+                        <li>Живой диалог передаётся человеку, когда это действительно нужно</li>
+                        <li>Оплаты, возвраты и сорванные платежи видны в панели</li>
+                        <li>Ночью и в выходные отдел работает так же, как днём</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Мини-кейсы (706, п.7 аудита) -->
+            <h3 class="text-2xl md:text-3xl font-bold text-center mt-16 mb-8" data-aos="fade-up">Как это выглядит <span class="text-gradient">на задачах</span></h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="text-lg font-bold text-white mb-3">Автоворонка для психолога по отношениям</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Бот сам ведёт клиентку от первого сообщения до оплаты: анкета, личный разбор за 2 минуты, предложение платного разбора, оплата в рублях, евро и картами СНГ. За 2,5 месяца - больше 5 400 человек в базе. За последние 30 дней - больше 1 400 бесплатных разборов и больше 100 оплат. Запуск курса: 179 записей на эфир за 9 дней.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-bold text-white mb-3">Лендинг за 25 минут</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Этот сайт. Задание на правки под продажи ушло в 23:45, в 00:10 на сайте уже были Метрика с шестью целями, блок гарантии, видеоотзыв и честные цены.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="150">
+                    <h3 class="text-lg font-bold text-white mb-3">Разработка: оплата с сайта с привязкой к Telegram</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Один агент пишет код, второй проходит оплату как покупатель, третий принимает работу. Тестировщик нашёл, что клиентке приходило два ответа вместо одного - исправили за 9 минут. От первой версии на тестовом стенде до работы с живыми клиентами - 43 минуты.</p>
+                </div>
+                <div class="glass card p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-bold text-white mb-3">Поддержка в Telegram</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Каждое утро агент проверяет, кто из клиентов ждёт хода от нас: оплатила и не получила, зависла, недовольна, написала и не дождалась ответа. На каждую - черновик ответа владельцу, отправка одной кнопкой. Проверка вместе с черновиками - 5 минут.</p>
+                </div>
+            </div>
+
+            <div class="glass card p-8 md:p-10 rounded-3xl mt-12 relative overflow-hidden border-l-4" style="border-left-color: #00D9FF;" data-aos="fade-up">
+                <div class="absolute -top-16 -right-16 w-64 h-64 bg-brand-aiCyan/10 blur-[80px] rounded-full"></div>
+                <div class="relative z-10">
+                    <div class="inline-block py-1 px-3 rounded-full bg-brand-aiCyan/10 text-brand-aiCyan text-xs font-bold uppercase tracking-wider mb-4">Кто это собрал</div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">И эту страницу, и цифры выше собрал <span class="text-gradient">Джарвис</span></h3>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                        Джарвис - ключевой ИИ-сотрудник отдела и мастер на все руки. Он меняет роли под задачу: сегодня аналитик и считает выручку прямо в базе, завтра вебмастер и верстает лендинг, к вечеру копирайтер, а ночью разбирает переписку с клиентами.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                        Текст, вёрстка и публикация этой страницы - его работа. Статистика за два месяца тоже посчитана им: не по памяти, а запросами к базе оплат, к базе лидов и к рабочей доске задач.
+                    </p>
+                    <p class="text-white font-semibold leading-relaxed">
+                        Это и есть суть отдела: одна голова, которая умеет становиться любым специалистом, и десяток рук вокруг неё. Не скриншот и не обещание, а инструмент, который в момент чтения уже работает.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Вопрос Любови: главный путь для тех, кто не готов платить сразу -->
+    <section id="ask-proof" class="py-16">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <div class="glass card rounded-3xl p-8 md:p-10 relative overflow-hidden" style="border: 1px solid rgba(42,171,238,0.45);" data-aos="zoom-in">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4 text-white">Не уверены, что вам это нужно? Спросите.</h2>
+                <p class="text-gray-300 mb-8 text-base md:text-lg leading-relaxed">Напишите Любови в Telegram - она ответит на любые вопросы про отдел: что он умеет, сколько стоит у вас в месяц, какой тариф подойдёт и нужен ли он вообще. Без обязательств покупать: поделимся тем, что знаем, и посоветуем, как лучше сделать в вашем случае.</p>
+                <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=after_proof" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#2AABEE] text-white font-bold hover:bg-[#2298D6] transition-colors mb-3 shadow-[0_0_20px_rgba(42,171,238,0.3)] hover:shadow-[0_0_25px_rgba(42,171,238,0.5)]">Написать Любови в Telegram</a>
+                <div class="text-xs text-gray-500 mb-1">Можно начать так: «Хочу понять, подойдёт ли мне ИИ-отдел. Мои задачи: ...»</div>
+                <div class="text-xs text-gray-500">Отвечаем быстро, без спама и навязывания.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. МАРШРУТ ДО РЕЗУЛЬТАТА -->
+    <section id="timeline" class="py-20">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Неделя до запуска, <span class="text-gradient">месяц до полной самостоятельности</span>
+            </h2>
+            <p class="text-center text-brand-aiCyan font-semibold uppercase tracking-wider text-sm mb-16" data-aos="fade-up">Работу делаем мы. От вас нужны только задачи и ответы на вопросы</p>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-[19px] md:left-1/2 top-0 bottom-0 w-[2px] bg-[#262626] md:-translate-x-1/2"></div>
+
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-aiCyan flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(0,217,255,0.3)] transition-transform group-hover:scale-110">1</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-0 md:pr-12 text-left md:text-right" data-aos="fade-right">
+                        <div class="glass card p-6 rounded-2xl hover:border-brand-aiCyan/50 transition-colors text-left inline-block w-full">
+                            <div class="text-brand-aiCyan font-bold text-sm mb-1 uppercase tracking-wider">День 1-2</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Разбор задач и состав отдела</h3>
+                            <p class="text-gray-400">Созвон: что у вас болит, какие задачи повторяются, куда уходят деньги и время. На выходе - состав отдела и список первых процессов, которые он забирает.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-aiViolet flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-transform group-hover:scale-110">2</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-12 text-left" data-aos="fade-left">
+                        <div class="glass card p-6 rounded-2xl hover:border-brand-aiViolet/50 transition-colors w-full">
+                            <div class="text-brand-aiViolet font-bold text-sm mb-1 uppercase tracking-wider">День 3-5</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Развёртывание контура</h3>
+                            <p class="text-gray-400">Сервер, базы, боты, подписки, доступы - оформляем и настраиваем мы. Вы не покупаете номера, не поднимаете виртуальные машины и не разбираетесь в логах.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-aiMagenta flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(236,72,153,0.3)] transition-transform group-hover:scale-110">3</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-0 md:pr-12 text-left md:text-right" data-aos="fade-right">
+                        <div class="glass card p-6 rounded-2xl hover:border-brand-aiMagenta/50 transition-colors text-left inline-block w-full">
+                            <div class="text-brand-aiMagenta font-bold text-sm mb-1 uppercase tracking-wider">К концу недели</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Передача готового отдела</h3>
+                            <p class="text-gray-400">Память, границы, первые рабочие навыки под ваши процессы - настроены. Вы пишете в Telegram и получаете результат. Продукт готов и работает.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group">
+                    <div class="hidden md:block md:w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-4 border-[#000000] text-brand-aiGreen flex items-center justify-center z-10 md:-translate-x-1/2 font-bold shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-transform group-hover:scale-110">4</div>
+                    <div class="w-full md:w-[45%] pl-16 md:pl-12 text-left" data-aos="fade-left">
+                        <div class="glass card p-6 rounded-2xl hover:border-brand-aiGreen/50 transition-colors w-full">
+                            <div class="text-brand-aiGreen font-bold text-sm mb-1 uppercase tracking-wider">Месяц после запуска</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Доучиваем под вас и сопровождаем</h3>
+                            <p class="text-gray-400">Отдел учится вашим процессам, вашей манере ставить задачи и вашим клиентам. Мы правим, дообучаем и держим на связи - пока он не начнёт работать так, как работал бы человек, знающий ваш бизнес.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16" data-aos="zoom-in">
+                <a href="#tariffs" class="inline-flex px-8 py-4 rounded-xl font-bold btn-gradient shadow-lg text-white">Смотреть условия</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ФОРМАТ: КАКИЕ РОЛИ ЗАКРЫВАЕТ -->
+    <section id="roles" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Десять ролей, <span class="text-gradient">которые закрывает отдел</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Это не список возможностей из рекламы, а роли, которые отдел реально закрывал последние два месяца.</p>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-12">
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="50"><span class="text-white font-bold">Программист</span><span class="text-gray-400 text-sm"> - пишет и чинит ботов, платёжные приёмники, рассылки и панели, проверяет их на тестовом стенде до выкатки</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="60"><span class="text-white font-bold">Аккаунт-менеджер</span><span class="text-gray-400 text-sm"> - руками настраивает сервисы: воронки в ChatPlace, домены и DNS, кассы, Метрику, Google-таблицы и календарь, Telegram-аккаунт</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="70"><span class="text-white font-bold">Сисадмин</span><span class="text-gray-400 text-sm"> - держит серверы, базы и бэкапы, следит, чтобы службы не падали молча, закрывает дыры в безопасности</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="80"><span class="text-white font-bold">Вебмастер и SEO</span><span class="text-gray-400 text-sm"> - собирает сайты и лендинги, проверяет, как их видят Яндекс, Google и ИИ-поиск, чинит ошибки, настраивает SEO</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="90"><span class="text-white font-bold">Маркетолог</span><span class="text-gray-400 text-sm"> - собирает оффер, линейку продуктов и цены, план запуска, позиционирование эксперта и шапку профиля. Считает конверсию по шагам воронки, выручку, замеры до и после правок, находит застрявших клиентов</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="100"><span class="text-white font-bold">Копирайтер</span><span class="text-gray-400 text-sm"> - пишет тексты воронок, постов, лендингов и писем, готовит волны рассылок и дожимы</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="110"><span class="text-white font-bold">SMM, контент и визуал</span><span class="text-gray-400 text-sm"> - делает сценарии рилсов, карусели, посты в Threads и X, генерирует картинки и обложки, монтирует видео и рилсы</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="120"><span class="text-white font-bold">Парсер и ресёрчер</span><span class="text-gray-400 text-sm"> - собирает данные с сайтов, из Telegram-чатов и каналов, с Авито, из X и YouTube: выгружает, чистит, складывает в таблицы. Ищет и проверяет факты в сети, следит за темами, расшифровывает голосовые, созвоны и видео</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="130"><span class="text-white font-bold">Ассистент-секретарь</span><span class="text-gray-400 text-sm"> - собирает КП, отчёты и презентации в фирменной вёрстке, рисует схемы и графики. Ставит задачи агентам, принимает их по факту, напоминает о сроках, ведёт календарь и поездки владельца</span></div>
+                <div class="glass card p-5 rounded-2xl" data-aos="fade-up" data-aos-delay="140"><span class="text-white font-bold">Оператор Telegram</span><span class="text-gray-400 text-sm"> - ведёт живой Telegram-аккаунт, админит группы, чаты и темы, проходит чужие воронки как клиент. Отвечает клиентам в Telegram и Директе, закрывает возражения, доводит до оплаты, подхватывает зависших</span></div>
+                <div class="glass card p-5 rounded-2xl border border-brand-aiViolet/40 md:col-span-2 text-center" data-aos="fade-up" data-aos-delay="150"><span class="text-white font-bold">На вас остаётся одно</span><span class="text-gray-400 text-sm"> - сказать, что нужно сделать</span></div>
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <p class="text-gray-400 mb-5">Что отдел подключает к себе по ходу работы:</p>
+                <div class="marquee-wrapper">
+                    <div class="marquee-container">
+                        <div class="flex items-center"><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Telegram</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Аналитика Instagram</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">YouTube и субтитры</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Расшифровка голоса</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Веб-ресёрч</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Графики и таблицы</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">CRM</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Платёжные системы</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Сайты и хостинг</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Генерация картинок</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Мост к сотням сервисов</span></div>
+                        <div class="flex items-center" aria-hidden="true"><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Telegram</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Аналитика Instagram</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">YouTube и субтитры</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Расшифровка голоса</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Веб-ресёрч</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Графики и таблицы</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">CRM</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Платёжные системы</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Сайты и хостинг</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Генерация картинок</span><span class="px-4 py-2 mx-1.5 rounded-full glass text-xs font-semibold text-gray-300 whitespace-nowrap">Мост к сотням сервисов</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. КТО ДЕЛАЕТ -->
+    <section id="author" class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-5xl relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                Кто <span class="text-gradient">ставит отдел</span>
+            </h2>
+
+            <div class="flex flex-col sm:flex-row gap-6 items-start glass card p-8 rounded-3xl" data-aos="fade-up">
+                <a href="https://t.me/ai_gromov8" target="_blank" rel="noopener noreferrer" class="relative shrink-0 group" title="Телеграм-канал Громова">
+                    <img src="https://ai.grmv8.ru/assets/img/gromov.jpg" alt="Громов" class="w-28 h-28 rounded-full border-2 border-brand-aiCyan object-cover shadow-[0_0_20px_rgba(0,217,255,0.3)] transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_30px_rgba(0,217,255,0.55)]">
+                </a>
+                <div>
+                    <h3 class="text-3xl font-extrabold text-white mb-3">Громов</h3>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4"><a href="https://t.me/grmv8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1 rounded-lg bg-brand-aiCyan/10 text-brand-aiCyan font-semibold text-sm hover:bg-brand-aiCyan/20 transition-colors" title="Написать Громову лично">@grmv8</a><a href="https://t.me/ai_gromov8" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-brand-aiCyan transition-colors">канал @ai_gromov8</a></div>
+                    <div class="text-gray-400 text-sm leading-relaxed space-y-2">
+                        <p>Математик-программист, управленец. Более 20 лет топ-менеджер: «Авторадио Тверь», «Европа плюс Тверская область», РИА «Верхневолжье». Экс генеральный директор медиахолдинга на 100+ человек. Преподавал цифровизацию в Иннополисе и Академии внешней торговли.</p>
+                        <p>Свой ИИ-отдел держит в работе каждый день: он ведёт маркетинг, пишет код, собирает сайты и следит за серверами. Вам ставится тот же отдел, а не его описание.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.5 ВЕБ-СТУДИЯ В КАРМАНЕ -->
+    <section id="studio" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Своя веб-студия в кармане <span class="text-gradient">по цене одного лендинга</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Лендинг с нормальными смыслами, текстами и настройкой у фрилансера стоит 50-100 тыс ₽. Веб-студия возьмёт в разы больше. И там, и там уйдёт несколько недель.</p>
+
+            <div class="grid md:grid-cols-2 gap-6 items-stretch">
+                <div class="glass card rounded-3xl p-8 flex flex-col" data-aos="fade-right">
+                    <h3 class="text-xl font-semibold text-gray-400 mb-6">Заказать лендинг на стороне</h3>
+                    <div class="text-2xl font-extrabold text-white mb-1">50-100 тыс ₽</div>
+                    <div class="text-xs text-gray-500 mb-6">за один лендинг у фрилансера, в студии - в разы дороже</div>
+                    <ul class="space-y-3 text-gray-400 text-sm flex-grow">
+                        <li class="flex gap-3">✕ <span>Несколько недель: бриф, прототип, тексты, дизайн, правки, выкладка</span></li>
+                        <li class="flex gap-3">✕ <span>Каждая правка - новое письмо и новое ожидание</span></li>
+                        <li class="flex gap-3">✕ <span>Фото для страницы ищете или снимаете сами</span></li>
+                        <li class="flex gap-3">✕ <span>Следующий лендинг - снова те же деньги и те же сроки</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass card rounded-3xl p-8 flex flex-col relative overflow-hidden" style="border: 1px solid #7C3AED55;" data-aos="fade-left">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-aiViolet/10 blur-[50px] rounded-full"></div>
+                    <h3 class="text-xl font-bold text-white mb-6 relative z-10">ИИ-отдел</h3>
+                    <div class="text-2xl font-extrabold text-white mb-1 relative z-10">30-60 минут</div>
+                    <div class="text-xs text-gray-400 mb-6 relative z-10">от задачи до лендинга, который уже открывается по ссылке</div>
+                    <ul class="space-y-3 text-gray-200 text-sm font-medium flex-grow relative z-10">
+                        <li class="flex gap-3">✓ <span>Смыслы и тексты под вашу аудиторию, вёрстка по вашему брендбуку</span></li>
+                        <li class="flex gap-3">✓ <span>Нужны фото - отдел проведёт нейрофотосессию и сгенерирует снимки сам</span></li>
+                        <li class="flex gap-3">✓ <span>Размещает страницу в интернете, подключает домен и аналитику, проверяет на телефоне и компьютере</span></li>
+                        <li class="flex gap-3">✓ <span>Десятки лендингов в месяц: под каждый продукт, вебинар, акцию или проверку гипотезы</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-center text-white font-semibold mt-10 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up">Вход в отдел стоит как один лендинг у фрилансера - от 60 до 125 тыс ₽. Второй, десятый и тридцатый лендинг отдел соберёт без отдельного счёта за каждый.</p>
+        </div>
+    </section>
+
+    <!-- Видеоотзыв -->
+    <section id="review" class="py-20">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">Что говорят те, <span class="text-gradient">кто уже поставил</span></h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Кристина прошла воркшоп по тарифу «Сам». Фрагмент её видеоотзыва.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12" data-aos="fade-up">
+                <video class="w-[270px] max-w-full rounded-3xl border border-[#262626] shadow-[0_0_40px_rgba(124,58,237,0.25)]" style="aspect-ratio: 9 / 16;" src="https://ai.grmv8.ru/assets/video/otzyv-kristina.mp4" poster="assets/video/otzyv-kristina.jpg" controls playsinline preload="none"></video>
+                <div class="max-w-md text-center md:text-left">
+                    <p class="text-xl md:text-2xl text-white font-semibold leading-snug mb-4">«Я покупала дорогущий курс, больше чем за 150 тысяч рублей. Вау не случилось: потратила полтора месяца впустую. Купила готовый воркшоп по Джарвису - за 6 дней поставила своих агентов, которые теперь на меня пашут бесплатно»</p>
+                    <p class="text-gray-400 text-sm">Кристина, тариф «Сам»</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ТАРИФЫ -->
+    <section id="tariffs" class="py-20 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-aiViolet/15 via-black/75 to-black/75"></div>
+        <div class="container mx-auto px-4 max-w-5xl relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">Условия</h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto" data-aos="fade-up">Три способа получить отдел. На любом тарифе вы не заморачиваетесь ни аккаунтами, ни подписками, ни серверами - всё делаем мы и отдаём работающий инструмент.</p>
+
+            <div class="grid lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
+                <div class="glass card rounded-3xl p-6 flex flex-col relative shadow-[0_0_50px_rgba(0,217,255,0.20)]" style="border: 2px solid #00D9FF;" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#141428] border border-brand-aiCyan text-brand-aiCyan px-6 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap uppercase tracking-wider">
+                        Под ключ
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6 mt-4 text-center">Готовый отдел без хлопот</h3>
+                    <ul class="space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Аккаунты, карты, подписки на ИИ и сервер - оформляем и настраиваем мы, вы не устанавливаете ничего</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Отдаём работающий инструмент: Джарвис на Claude и Ричард, который держит сервер</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Месяц донастраиваем и тюнингуем отдел под вас: ваши процессы, клиентов, манеру ставить задачи</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Постоянная поддержка: новые скиллы, готовые решения и связки, личный VPN</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Сервер, шлюзы и сбои на нас всё время работы</li>
+                    </ul>
+                    <div class="text-3xl font-extrabold text-white mb-1 text-center" data-price="jarvis-turnkey">80 000₽</div>
+                    <div class="text-[11px] text-gray-500 text-center mb-1">НДС 5% включён</div>
+                    <div class="text-sm text-brand-aiCyan font-bold text-center mb-2" data-price="jarvis-turnkey-monthly" data-price-prefix="+ " data-price-suffix="/мес - аренда и техобслуживание">+ 15 000₽/мес - аренда и техобслуживание</div>
+                    <div class="text-xs text-gray-500 text-center mb-4 leading-relaxed">+ подписки на ИИ 6,5-20&nbsp;тыс.&nbsp;₽/мес в зависимости от загрузки. Сумму передаёте нам, всем сервисам платим мы сами - так нет риска блокировок</div>
+                    <div class="text-[11px] text-gray-500 text-center mb-4 leading-relaxed border-t border-[#262626] pt-3">Неделя на сборку, месяц на донастройку под вас.</div>
+                    <a href="https://tg.bedzen.ru/pay?p=jarvis-turnkey&amp;utm_source=ai_grmv8&amp;utm_content=tariff_turnkey" target="_blank" rel="noopener noreferrer" class="w-full text-center py-4 rounded-xl font-bold shadow-lg text-white btn-cyan" data-price="jarvis-turnkey" data-price-prefix="Оплатить - ">Оплатить - 80 000₽</a>
+                    <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=tariff_turnkey_question" target="_blank" rel="noopener noreferrer" class="block text-center text-sm text-gray-400 hover:text-white underline underline-offset-4 mt-3">Сначала задать вопрос</a>
+                </div>
+
+                <div class="glass card rounded-3xl p-6 flex flex-col relative shadow-[0_0_40px_rgba(124,58,237,0.25)]" style="border: 2px solid #7C3AED;" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 btn-gradient text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap uppercase tracking-wider">
+                        Бизнес класс
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6 mt-4 text-center">Две модели, двойная проверка</h3>
+                    <ul class="space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Всё, что в «Под ключ»: аккаунты, подписки, сервер и настройка на нас</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Дополнительный агент Герман на ChatGPT: независимое второе мнение и перепроверка на критичных задачах - другая модель ловит то, что пропустит первая</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Расширенные подписки на ИИ: видео, графика, верификация</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Месяц донастраиваем отдел под вас и делаем его уникальным под ваш бизнес</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Постоянная поддержка, сервер и сбои на нас всё время работы</li>
+                    </ul>
+                    <div class="text-3xl font-extrabold text-white mb-1 text-center" data-price="jarvis-business">120 000₽</div>
+                    <div class="text-[11px] text-gray-500 text-center mb-1">НДС 5% включён</div>
+                    <div class="text-sm text-brand-aiCyan font-bold text-center mb-2" data-price="jarvis-business-monthly" data-price-prefix="+ " data-price-suffix="/мес - аренда и техобслуживание">+ 20 000₽/мес - аренда и техобслуживание</div>
+                    <div class="text-xs text-gray-500 text-center mb-4 leading-relaxed">+ подписки на ИИ 6,5-20&nbsp;тыс.&nbsp;₽/мес в зависимости от загрузки. Сумму передаёте нам, всем сервисам платим мы сами - так нет риска блокировок</div>
+                    <div class="text-[11px] text-gray-500 text-center mb-4 leading-relaxed border-t border-[#262626] pt-3">Неделя на сборку, месяц на донастройку под вас.</div>
+                    <a href="https://tg.bedzen.ru/pay?p=jarvis-business&amp;utm_source=ai_grmv8&amp;utm_content=tariff_business" target="_blank" rel="noopener noreferrer" class="w-full text-center py-4 rounded-xl btn-gradient font-bold shadow-lg text-white" data-price="jarvis-business" data-price-prefix="Оплатить - ">Оплатить - 120 000₽</a>
+                    <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=tariff_business_question" target="_blank" rel="noopener noreferrer" class="block text-center text-sm text-gray-400 hover:text-white underline underline-offset-4 mt-3">Сначала задать вопрос</a>
+                </div>
+
+                <div class="glass card rounded-3xl p-6 flex flex-col relative shadow-[0_0_40px_rgba(34,197,94,0.20)]" style="border: 2px solid #22C55E;" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#141428] border border-brand-aiGreen text-brand-aiGreen px-6 py-2 rounded-full text-sm font-bold shadow-lg whitespace-nowrap uppercase tracking-wider">
+                        В собственность
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6 mt-4 text-center">Отдел целиком в вашу собственность</h3>
+                    <ul class="space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Всё, что в «Бизнес классе»: Джарвис на Claude, Ричард, который держит сервер, и Герман на ChatGPT для второго мнения</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Устанавливаем на сервер и месяц сопровождаем: донастраиваем отдел под ваш бизнес</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Телеграм-адаптер уже в тарифе: агент работает с вашим обычным аккаунтом Telegram</li>
+                        <li class="flex items-start gap-3 text-gray-300"><span class="text-brand-aiCyan">✓</span> Парсер Telegram-каналов: собирает и разбирает посты нужных вам каналов</li>
+                    </ul>
+                    <div class="text-3xl font-extrabold text-white mb-1 text-center" data-price="jarvis-own">170 000₽</div>
+                    <div class="text-[11px] text-gray-500 text-center mb-1">НДС 5% включён</div>
+                    <div class="text-sm text-brand-aiGreen font-bold text-center mb-2">без ежемесячной платы нам</div>
+                    <div class="text-xs text-gray-500 text-center mb-4 leading-relaxed">Устанавливаем на сервер и за месяц сопровождения передаём вам все доступы, скиллы, настройки, аккаунты и оплаты</div>
+                    <div class="text-[11px] text-gray-500 text-center mb-4 leading-relaxed border-t border-[#262626] pt-3">Неделя на сборку, месяц на донастройку и передачу.</div>
+                    <a href="https://tg.bedzen.ru/pay?p=jarvis-own&amp;utm_source=ai_grmv8&amp;utm_content=tariff_own" target="_blank" rel="noopener noreferrer" class="w-full text-center py-4 rounded-xl font-bold shadow-lg text-white btn-cyan" data-price="jarvis-own" data-price-prefix="Оплатить - ">Оплатить - 170 000₽</a>
+                    <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=tariff_own_question" target="_blank" rel="noopener noreferrer" class="block text-center text-sm text-gray-400 hover:text-white underline underline-offset-4 mt-3">Сначала задать вопрос</a>
+                </div>
+            </div>
+            <div class="glass card rounded-3xl p-8 max-w-4xl mx-auto mt-12 border-l-4" style="border-left-color: #22C55E;" data-aos="fade-up">
+                <div class="inline-block py-1 px-3 rounded-full bg-brand-aiGreen/10 text-brand-aiGreen text-xs font-bold uppercase tracking-wider mb-4">«Под ключ» и «Бизнес класс»</div>
+                <h3 class="text-2xl font-bold text-white mb-3">Гарантия окупаемости x2</h3>
+                <p class="text-gray-300 leading-relaxed mb-3">Если за первый месяц отдел не сделал для вас работы хотя бы вдвое дороже месячного обслуживания, следующий месяц обслуживания - от нас в подарок.</p>
+                <p class="text-white font-semibold mb-4">«Под ключ»: работа на 30 000₽ за месяц. «Бизнес класс»: на 40 000₽.</p>
+                <p class="text-gray-500 text-xs italic leading-relaxed">Работу оцениваем по средним ценам тех же задач на биржах фриланса (Kwork, FL.ru): лендинг, пост, разбор конкурентов, бот, выгрузка. Список задач с ценами ведём вместе с вами весь месяц. Подписки на ИИ оплачиваются по факту и в подарок не входят.</p>
+            </div>
+
+            <div class="glass card rounded-3xl p-8 max-w-4xl mx-auto mt-8 border-l-4" style="border-left-color: #00D9FF;" data-aos="fade-up">
+                <div class="inline-block py-1 px-3 rounded-full bg-brand-aiCyan/10 text-brand-aiCyan text-xs font-bold uppercase tracking-wider mb-4">Дополнительно к любому тарифу</div>
+                <div class="flex flex-col md:flex-row md:items-center gap-6">
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-white mb-3">Телеграм-адаптер: агент управляет вашим обычным аккаунтом</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                            Отдел получает руки в самом Telegram, а не только в боте. Пишет и читает от вашего аккаунта, ведёт переписку с клиентами, собирает и разбирает сообщения из чатов и каналов, вытаскивает нужное из закрытых сообществ, отслеживает упоминания и связывается с людьми по списку.
+                        </p>
+                        <p class="text-gray-500 text-xs">Ставится за один день, работает на любом тарифе.</p>
+                    </div>
+                    <div class="shrink-0 text-center md:border-l md:border-[#262626] md:pl-6">
+                        <div class="text-3xl font-extrabold text-white mb-3" data-price="jarvis-tg-adapter">19 900₽</div>
+                        <a href="https://tg.bedzen.ru/pay?p=jarvis-tg-adapter&amp;utm_source=ai_grmv8&amp;utm_content=tariff_adapter" target="_blank" rel="noopener noreferrer" class="inline-flex px-6 py-3 rounded-xl font-bold shadow-lg text-white btn-cyan" data-price="jarvis-tg-adapter" data-price-prefix="Добавить - ">Добавить - 19 900₽</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass card rounded-3xl p-8 max-w-4xl mx-auto mt-8" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-white mb-4">Посчитайте на своих задачах</h3>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    Сайт у подрядчика - от 50 000₽ и две-три недели согласований. Пост у копирайтера - 1 500-3 000₽. Разбор конкурентов у маркетолога - от 10 000₽. Бот - ещё один счёт и ещё одно ожидание. Тот же объём работ, что отдел закрывает за месяц, подрядчиками стоит 1,0-1,7 млн ₽.
+                </p>
+                <p class="text-white font-semibold leading-relaxed">
+                    Отдел делает всё это столько раз, сколько понадобится, - в рамках от 15 000₽ в месяц за аренду и техобслуживание плюс подписки на ИИ. Окупаемость считается не месяцами, а задачами.
+                </p>
+            </div>
+
+            <div class="text-center mt-10" data-aos="fade-up">
+                <p class="text-gray-300 text-sm mb-3">Не уверены, какой тариф ваш? Подберём вместе, без давления.</p>
+                <p class="text-gray-300 text-sm mb-3">Работаем с юрлицами: возможна оплата по счёту, НДС 5% уже включён в сумму. Условия - в <a href="/offer/" class="underline underline-offset-4 hover:text-white">публичной оферте</a>.</p>
+                <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=tariffs_invoice" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white underline underline-offset-4 text-sm">Нужен счёт или есть вопрос перед оплатой? Написать Любови в Telegram</a>
+                <p class="text-gray-400 text-sm mt-2">Работаем от ИП Громов А. Ю., цены с НДС 5%. Счёт и закрывающие документы - по запросу, напишите «нужен счёт».</p>
+                <p class="text-gray-400 text-sm mt-2">Возможна рассрочка - по запросу, напишите <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=installments" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-white">Любови</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8a. САМ, ПОДПИСКА, ПРАКТИКУМ ИЛИ ОТДЕЛ -->
+    <section id="compare" class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Поставить агента сейчас может каждый. <span class="text-gradient">Вопрос - что он будет уметь</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-6 max-w-3xl mx-auto" data-aos="fade-up">Хватит дисциплины и терпения - найдёте нужный ролик среди сотен на YouTube. Хватит денег на сверхлимит - возьмёте подписку на готового агента в Telegram. Мы предлагаем третье: роли, которые уже работают в нашем бизнесе, и гарантию, что заработают в вашем.</p>
+            <p class="text-center text-gray-500 text-sm mb-14 max-w-2xl mx-auto" data-aos="fade-up">Теоретических решений не даём. Только то, что мы с командой опробовали сами и чем пользуемся каждый день.</p>
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+                <div class="glass card rounded-3xl p-7 flex flex-col" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-5 opacity-60">
+                        <span class="text-2xl">▶️</span>
+                        <h3 class="text-xl font-semibold text-gray-400">Ролик на YouTube</h3>
+                    </div>
+                    <div class="text-2xl font-extrabold text-white mb-1">0₽</div>
+                    <div class="text-xs text-gray-500 mb-5">плюс ваше время на пробы и ошибки</div>
+                    <ul class="space-y-3 text-gray-400 text-sm flex-grow">
+                        <li class="flex gap-3">✕ <span>Нет гарантии, что агент выйдет как в видео и будет делать вашу работу</span></li>
+                        <li class="flex gap-3">✕ <span>VPN, иностранная карта, прогрев аккаунта - ищете сами, бан аккаунта на вас</span></li>
+                        <li class="flex gap-3">✕ <span>Готовых ролей ноль: каждую придумываете и обкатываете на своих клиентах</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass card rounded-3xl p-7 flex flex-col" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-5 opacity-60">
+                        <span class="text-2xl">💳</span>
+                        <h3 class="text-xl font-semibold text-gray-400">Подписка на агента в Telegram</h3>
+                    </div>
+                    <div class="text-lg font-extrabold text-white mb-1 leading-snug">от нескольких тысяч до десятков тысяч ₽</div>
+                    <div class="text-xs text-gray-500 mb-5">в месяц, плюс оплата сверх лимита</div>
+                    <ul class="space-y-3 text-gray-400 text-sm flex-grow">
+                        <li class="flex gap-3">✕ <span>В платёж входит ограниченный запас токенов</span></li>
+                        <li class="flex gap-3">✕ <span>Всё сверх лимита - как сверхурочные, за каждое действие отдельно. Чем больше пользы, тем дороже месяц</span></li>
+                        <li class="flex gap-3">✕ <span>Агент чужой: память, настройки и навыки остаются у продавца</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass card rounded-3xl p-7 flex flex-col" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-5 opacity-80">
+                        <span class="text-2xl">🎓</span>
+                        <h3 class="text-xl font-semibold text-gray-300">Практикум «Джарвис»</h3>
+                    </div>
+                    <div class="text-2xl font-extrabold text-white mb-1">по запросу</div>
+                    <div class="text-xs text-gray-500 mb-5">4 дня, куратор и закрытый чат</div>
+                    <ul class="space-y-3 text-gray-300 text-sm flex-grow">
+                        <li class="flex gap-3">✓ <span>Свой агент на своём сервере и сторож, который поднимает его при сбое</span></li>
+                        <li class="flex gap-3">✓ <span>Настроенная память и умение собирать новые навыки</span></li>
+                        <li class="flex gap-3 text-gray-400">✕ <span>Готовых ролей 2-3: ассистент, разбор Reels конкурентов, помощник YouTube-продюсера. Остальные строите сами</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass card rounded-3xl p-7 flex flex-col relative overflow-hidden order-first md:order-none" style="border: 1px solid #7C3AED88;" data-aos="fade-up">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-aiViolet/10 blur-[50px] rounded-full"></div>
+                    <div class="self-start text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-brand-aiViolet/20 text-white mb-4 relative z-10">Рекомендуем</div>
+                    <div class="flex items-center gap-3 mb-5 relative z-10">
+                        <span class="text-2xl">⚡</span>
+                        <h3 class="text-2xl font-bold text-white">Отдел под ключ</h3>
+                    </div>
+                    <div class="text-2xl font-extrabold text-white mb-1 relative z-10">от 80 000₽</div>
+                    <div class="text-xs text-gray-400 mb-5 relative z-10">неделя до запуска, месяц сопровождения</div>
+                    <ul class="space-y-3 text-gray-200 text-sm font-medium flex-grow relative z-10">
+                        <li class="flex gap-3">✓ <span>10 ролей в ваших процессах: от программиста и сисадмина до продажника и секретаря</span></li>
+                        <li class="flex gap-3">✓ <span>Каждую роль сначала собрали для себя: 370 задач за два месяца, 270+ оплат без человека в переписке</span></li>
+                        <li class="flex gap-3">✓ <span>Фиксированная подписка, за действия сверх неё не платите</span></li>
+                        <li class="flex gap-3">✓ <span>Не окупится вдвое за месяц - второй месяц бесплатно</span></li>
+                        <li class="flex gap-3">✓ <span>Новая роль показала себя у нас - делимся с вами. На тарифе «В собственность» отдаём пульт полностью</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <details class="mt-10 glass rounded-3xl p-6 group" data-aos="fade-up">
+                <summary class="cursor-pointer text-center text-white font-semibold list-none">Сравнить подробно <span class="text-gray-500 group-open:hidden">↓</span><span class="text-gray-500 hidden group-open:inline">↑</span></summary>
+                <div class="overflow-x-auto mt-6">
+                    <table class="w-full min-w-[820px] text-sm text-left">
+                        <thead>
+                            <tr class="border-b border-brand-border text-gray-400">
+                                <th class="py-3 pr-4 font-medium"></th>
+                                <th class="py-3 pr-4 font-medium">Ролик на YouTube</th>
+                                <th class="py-3 pr-4 font-medium">Подписка в Telegram</th>
+                                <th class="py-3 pr-4 font-medium">Практикум</th>
+                                <th class="py-3 font-bold text-white">Отдел под ключ</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-400">
+                            <tr class="border-b border-white/5"><td class="py-3 pr-4 text-gray-300">Что получаете</td><td class="py-3 pr-4">Агента, если установка дошла до конца</td><td class="py-3 pr-4">Чужого агента в аренду</td><td class="py-3 pr-4">Своего агента на своём сервере</td><td class="py-3 text-gray-200">Отдел из 10 ролей в ваших процессах</td></tr>
+                            <tr class="border-b border-white/5"><td class="py-3 pr-4 text-gray-300">Готовые роли в первый день</td><td class="py-3 pr-4">0</td><td class="py-3 pr-4">Те, что заложил продавец</td><td class="py-3 pr-4">2-3</td><td class="py-3 text-gray-200">10, каждая работала на живых задачах</td></tr>
+                            <tr class="border-b border-white/5"><td class="py-3 pr-4 text-gray-300">Сколько стоит работа</td><td class="py-3 pr-4">Бесплатно, плюс ваше время</td><td class="py-3 pr-4">Лимит токенов в платеже, сверх лимита - за каждое действие</td><td class="py-3 pr-4">Ваш сервер и подписка</td><td class="py-3 text-gray-200">Фиксированная подписка, за действия сверх неё не платите</td></tr>
+                            <tr class="border-b border-white/5"><td class="py-3 pr-4 text-gray-300">Обход ограничений РФ</td><td class="py-3 pr-4">Ищете сами, бан аккаунта - ваш риск</td><td class="py-3 pr-4">На стороне продавца</td><td class="py-3 pr-4">Пошаговая инструкция</td><td class="py-3 text-gray-200">Делаем мы</td></tr>
+                            <tr class="border-b border-white/5"><td class="py-3 pr-4 text-gray-300">Кто ставит и чинит</td><td class="py-3 pr-4">Вы</td><td class="py-3 pr-4">Продавец, как умеет</td><td class="py-3 pr-4">Вы, с подсказками в чате</td><td class="py-3 text-gray-200">Мы</td></tr>
+                            <tr class="border-b border-white/5"><td class="py-3 pr-4 text-gray-300">Новые роли потом</td><td class="py-3 pr-4">Собираете сами</td><td class="py-3 pr-4">Ждёте, что добавит продавец</td><td class="py-3 pr-4">Собираете сами</td><td class="py-3 text-gray-200">Делимся новыми ролями, как только они доказали эффективность у нас</td></tr>
+                            <tr class="border-b border-white/5"><td class="py-3 pr-4 text-gray-300">Гарантия результата</td><td class="py-3 pr-4">Нет</td><td class="py-3 pr-4">Нет</td><td class="py-3 pr-4">Помощь куратора</td><td class="py-3 text-gray-200">Не окупится вдвое за месяц - второй месяц бесплатно</td></tr>
+                            <tr><td class="py-3 pr-4 text-gray-300">Цена</td><td class="py-3 pr-4">0₽</td><td class="py-3 pr-4">от нескольких тысяч до десятков тысяч в месяц, плюс сверхлимит</td><td class="py-3 pr-4">По запросу</td><td class="py-3 text-white font-semibold">от 80 000₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+
+            <div class="mt-12 text-center text-gray-400 text-lg" data-aos="fade-up">
+                Ролик даёт инструкцию, подписка - лимит токенов. <span class="text-white font-semibold border-b border-brand-aiViolet pb-1">Мы отдаём отдел, проверенный на собственных деньгах.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Вопрос Любови: главный путь для тех, кто не готов платить сразу -->
+    <section id="ask-tariffs" class="py-16">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <div class="glass card rounded-3xl p-8 md:p-10 relative overflow-hidden" style="border: 1px solid rgba(42,171,238,0.45);" data-aos="zoom-in">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4 text-white">Не уверены, что вам это нужно? Спросите.</h2>
+                <p class="text-gray-300 mb-8 text-base md:text-lg leading-relaxed">Напишите Любови в Telegram - она ответит на любые вопросы про отдел: что он умеет, сколько стоит у вас в месяц, какой тариф подойдёт и нужен ли он вообще. Без обязательств покупать: поделимся тем, что знаем, и посоветуем, как лучше сделать в вашем случае.</p>
+                <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=after_tariffs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#2AABEE] text-white font-bold hover:bg-[#2298D6] transition-colors mb-3 shadow-[0_0_20px_rgba(42,171,238,0.3)] hover:shadow-[0_0_25px_rgba(42,171,238,0.5)]">Написать Любови в Telegram</a>
+                <div class="text-xs text-gray-500">Отвечаем быстро, без спама и навязывания.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section id="faq" class="py-20 bg-[#121212]/50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12" data-aos="fade-up">Ответы на вопросы</h2>
+
+            <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        А чем вообще отличаются сотни предложений агентов на рынке?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Большинство предложений продают инструмент: ролик с установкой, подписку на готового агента или курс. Агент у вас появится, но что он будет делать в вашем бизнесе, придётся придумывать и проверять самому. В подписку к тому же входит ограниченный запас токенов, и каждое действие сверх лимита оплачивается отдельно. Мы отдаём 10 ролей, которые сначала собрали для собственного бизнеса и проверили на живых клиентах: 370 задач за два месяца, 270+ оплат без человека в переписке. Теоретических решений не продаём - только то, чем сами пользуемся каждый день. Сравнение по пунктам - в блоке «Поставить агента сейчас может каждый» выше.</div>
+                    </div>
+                </details>
+
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Нужно ли что-то уметь и устанавливать?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">На тарифах «Под ключ» и «Бизнес класс» - нет. Сборку, настройку и обслуживание делаем мы. От вас нужен разговор о задачах на старте и ответы на уточняющие вопросы дальше. Работа с отделом выглядит как переписка в Telegram.</div>
+                    </div>
+                </details>
+
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Чем отличаются тарифы?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">«Под ключ» - не заморачиваетесь ничем: аккаунты, подписки на ИИ, сервер и настройку делаем мы, отдаём работающий инструмент и ещё месяц донастраиваем его под вас, дальше постоянная поддержка. «Бизнес класс» - всё то же плюс дополнительный агент на ChatGPT: он даёт независимое второе мнение и перепроверяет работу на критичных задачах. И расширенные подписки на видео и графику. «В собственность» - всё, что в «Бизнес классе», плюс телеграм-адаптер и парсер Telegram-каналов: ставим на сервер и за месяц сопровождения передаём вам все доступы, скиллы, настройки, аккаунты и оплаты.</div>
+                    </div>
+                </details>
+
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Сколько ждать до первого результата?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Неделя от старта до работающего отдела. Первые задачи он берёт сразу после передачи доступа, дальше месяц уходит на то, чтобы он выучил ваши процессы и перестал переспрашивать очевидное.</div>
+                    </div>
+                </details>
+
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        А если сервер упадёт или агент сломается?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">В контуре стоит второй агент-сторож: он молчит, пока всё работает, и поднимает основного, когда тот лёг. На тарифах «Под ключ» и «Бизнес класс» разбор сбоев на нас всё время работы, на тарифе «В собственность» - месяц сопровождения до передачи.</div>
+                    </div>
+                </details>
+
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Что даёт телеграм-адаптер и зачем он нужен?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Обычный бот пишет только тем, кто сам ему написал. Адаптер даёт отделу доступ к вашему личному аккаунту: он может вести переписку от вашего имени, читать и разбирать чаты и каналы, собирать нужное из сообществ и связываться с людьми по списку. Стоит 19 900₽ и ставится за день.</div>
+                    </div>
+                </details>
+
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Чем это лучше конструктора вроде Manychat?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Конструктор работает по заранее собранным сценариям и дорожает вместе с числом сообщений. Отдел стоит на собственном сервере, помнит контекст, сам пишет и запускает код, собирает сайты и разбирает данные. Новые задачи не упираются в тариф.</div>
+                    </div>
+                </details>
+
+                <details class="glass rounded-2xl group cursor-pointer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg" itemprop="name">
+                        Кому отдел не подойдёт?
+                        <span class="text-gray-400">⌄</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 border-t border-[#262626] pt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">Тем, у кого нет повторяющихся задач: если работа разовая и раз в квартал, дешевле нанять подрядчика под конкретный проект. Отдел окупается там, где задачи идут потоком - контент, клиенты, сайты, аналитика, переписка.</div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. LEAD MAGNET -->
+    <section id="ask" class="py-20">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <div class="glass card rounded-3xl p-10 border border-[#262626] relative overflow-hidden" data-aos="zoom-in">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Не уверены, что именно отдел заберёт у вас?</h2>
+                    <p class="text-gray-400 mb-8 text-lg leading-relaxed">
+                        Напишите в Telegram - бесплатно разберём ваши сегодняшние задачи: какие из них отдел закроет сразу, какие после доучивания, а какие вообще не стоит ему отдавать.
+                    </p>
+                    <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=bottom" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#2AABEE] text-white font-bold hover:bg-[#2298D6] transition-colors mb-3 shadow-[0_0_20px_rgba(42,171,238,0.3)] hover:shadow-[0_0_25px_rgba(42,171,238,0.5)]">
+                        Написать Любови в Telegram
+                    </a>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest">Без рекламы, без спама - просто разбор</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-[#000000] text-[#71717a] text-sm font-medium">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                <div class="flex items-center gap-2 text-[#71717a] font-bold tracking-widest uppercase text-[10px] md:text-xs">
+                    © 2026 Громов · ИИ-отдел под ключ
+                </div>
+            </div>
+            <details class="text-center text-xs font-normal mb-4">
+                <summary class="cursor-pointer inline-block opacity-80 hover:text-white">Документы</summary>
+                <div class="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2">
+                    <a href="/contacts/" class="hover:text-white underline underline-offset-4">Контакты и реквизиты</a>
+                    <a href="/offer/" class="hover:text-white underline underline-offset-4">Публичная оферта</a>
+                    <a href="/refund/" class="hover:text-white underline underline-offset-4">Условия возврата</a>
+                    <a href="/terms/" class="hover:text-white underline underline-offset-4">Пользовательское соглашение</a>
+                    <a href="/privacy/" class="hover:text-white underline underline-offset-4">Политика конфиденциальности</a>
+                    <a href="/consent/" class="hover:text-white underline underline-offset-4">Согласие на обработку данных</a>
+                    <a href="/cookies/" class="hover:text-white underline underline-offset-4">Политика cookie</a>
+                </div>
+            </details>
+            <div class="text-center text-xs font-normal mb-3">
+                Вопросы и подбор тарифа - Любовь, <a href="https://t.me/LubovForte?utm_source=ai_grmv8&amp;utm_content=footer" target="_blank" rel="noopener noreferrer" class="hover:text-white underline underline-offset-4">@LubovForte</a>. Лично Александр - <a href="https://t.me/grmv8" target="_blank" rel="noopener noreferrer" class="hover:text-white underline underline-offset-4">@grmv8</a>. Почта <a href="mailto:grmv8@ya.ru" class="hover:text-white underline underline-offset-4">grmv8@ya.ru</a>.
+            </div>
+            <div class="text-center text-xs opacity-60 font-normal">
+                ИП Громов Александр Юрьевич · ИНН 695001224503 · ОГРНИП 322695200047134 · <a href="mailto:grmv8@ya.ru" class="hover:text-white">grmv8@ya.ru</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        // Шапка уплотняется после первого экрана
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navbar.classList.add('shadow-[0_8px_30px_rgba(0,0,0,0.6)]', 'bg-black/70');
+            } else {
+                navbar.classList.remove('shadow-[0_8px_30px_rgba(0,0,0,0.6)]', 'bg-black/70');
+            }
+        });
+
+        // Интерактивная нейросеть на фоне — та же механика, что на tr6.ru,
+        // перекрашенная под палитру этой страницы. На узких экранах точек
+        // меньше: анимация не должна съедать батарею телефона.
+        (function () {
+            const canvas = document.getElementById('neuralMesh');
+            if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const ctx = canvas.getContext('2d');
+            let width, height, particles = [];
+            const connectionDistance = 150;
+            const mouseConnectionDistance = 250;
+            let mouse = { x: -1000, y: -1000 };
+            let targetMouse = { x: -1000, y: -1000 };
+
+            function initMesh() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+                const count = Math.min(Math.floor(window.innerWidth / 18), 110);
+                particles = [];
+                for (let i = 0; i < count; i++) {
+                    const vx = (Math.random() - 0.5) * 1.1;
+                    const vy = (Math.random() - 0.5) * 1.1;
+                    particles.push({ x: Math.random() * width, y: Math.random() * height, vx, vy, baseVx: vx, baseVy: vy, radius: Math.random() * 1.5 + 0.5 });
+                }
+            }
+
+            window.addEventListener('resize', initMesh);
+            window.addEventListener('mousemove', (e) => { targetMouse.x = e.clientX; targetMouse.y = e.clientY; });
+            window.addEventListener('mouseout', () => { targetMouse.x = -1000; targetMouse.y = -1000; });
+            window.addEventListener('touchmove', (e) => { targetMouse.x = e.touches[0].clientX; targetMouse.y = e.touches[0].clientY; }, { passive: true });
+            window.addEventListener('touchend', () => { targetMouse.x = -1000; targetMouse.y = -1000; });
+
+            function animateMesh() {
+                requestAnimationFrame(animateMesh);
+                ctx.clearRect(0, 0, width, height);
+                mouse.x += (targetMouse.x - mouse.x) * 0.1;
+                mouse.y += (targetMouse.y - mouse.y) * 0.1;
+
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.x += p.vx; p.y += p.vy;
+                    p.vx += (p.baseVx - p.vx) * 0.03; p.vy += (p.baseVy - p.vy) * 0.03;
+                    if (p.x < 0 || p.x > width) { p.vx *= -1; p.baseVx *= -1; p.x = Math.max(0, Math.min(width, p.x)); }
+                    if (p.y < 0 || p.y > height) { p.vy *= -1; p.baseVy *= -1; p.y = Math.max(0, Math.min(height, p.y)); }
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(180, 220, 255, 0.18)';
+                    ctx.fill();
+
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dx = p.x - p2.x, dy = p.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < connectionDistance) {
+                            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y);
+                            ctx.strokeStyle = 'rgba(160, 200, 255, ' + (1 - dist / connectionDistance) * 0.09 + ')';
+                            ctx.stroke();
+                        }
+                    }
+
+                    const dxm = p.x - mouse.x, dym = p.y - mouse.y;
+                    const distMouse = Math.sqrt(dxm * dxm + dym * dym);
+                    if (distMouse < mouseConnectionDistance) {
+                        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = 'rgba(0, 217, 255, ' + (1 - distMouse / mouseConnectionDistance) * 0.4 + ')';
+                        ctx.stroke();
+                        const force = (mouseConnectionDistance - distMouse) / mouseConnectionDistance;
+                        p.vx += (dxm / distMouse) * force * 0.3;
+                        p.vy += (dym / distMouse) * force * 0.3;
+                    }
+                }
+            }
+
+            initMesh();
+            animateMesh();
+        })();
+
+        const stickyCta = document.getElementById('sticky-cta');
+        const heroSection = document.getElementById('hero');
+        window.addEventListener('scroll', () => {
+            const heroBottom = heroSection.getBoundingClientRect().bottom;
+            if (heroBottom < 0) {
+                stickyCta.classList.remove('translate-y-full');
+            } else {
+                stickyCta.classList.add('translate-y-full');
+            }
+        });
+
+
+        // Цели Метрики: оплата по тарифу, переход в переписку к Любови, доскролл до тарифов.
+        (function () {
+            const goal = (name) => { try { ym(113627348, 'reachGoal', name); } catch (e) {} };
+            const payGoals = { 'jarvis': 'pay_sam', 'jarvis-turnkey': 'pay_turnkey', 'jarvis-business': 'pay_business', 'jarvis-tg-adapter': 'pay_adapter' };
+            document.addEventListener('click', (e) => {
+                const a = e.target.closest('a[href]');
+                if (!a) return;
+                if (a.href.includes('tg.bedzen.ru/pay')) {
+                    const code = new URL(a.href).searchParams.get('p');
+                    if (payGoals[code]) goal(payGoals[code]);
+                } else if (a.href.includes('t.me/LubovForte')) {
+                    goal('write_lubov');
+                }
+            });
+            const tariffs = document.getElementById('tariffs');
+            if (tariffs && 'IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    if (entries.some((en) => en.isIntersecting)) { goal('scroll_tariffs'); io.disconnect(); }
+                });
+                io.observe(tariffs);
+            }
+        })();
+
+        // Цены приезжают из конфига бота-стража (tg.bedzen.ru), там же, где
+        // берётся цена для самой ссылки на оплату и для названия в чеке —
+        // иначе на сайте и в кассе рано или поздно оказались бы разные цифры.
+        // Числа в разметке не заглушки, а запасной вариант: не ответил сервис
+        // — страница остаётся с последней задеплоенной ценой, а не с пустотой.
+        (function () {
+            // toLocaleString разделяет разряды неразрывным пробелом — меняем
+            // на обычный, чтобы цифра совпадала с тем, что уже в разметке.
+            const fmt = (n) => n.toLocaleString('ru-RU').replace(/ /g, ' ') + '₽';
+            fetch('https://tg.bedzen.ru/webhooks/prices.json', { cache: 'no-store' })
+                .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+                .then((prices) => {
+                    document.querySelectorAll('[data-price]').forEach((el) => {
+                        const tariff = prices[el.dataset.price];
+                        if (!tariff) return;
+                        el.textContent =
+                            (el.dataset.pricePrefix || '') +
+                            fmt(tariff.price) +
+                            (el.dataset.priceSuffix || '');
+                    });
+                })
+                .catch((e) => console.warn('прайс не получен, показана цена из разметки', e));
+        })();
+
+        // Свет внутри карточки идёт за курсором: координаты отдаём в CSS-переменные.
+        (function () {
+            if (window.matchMedia('(hover: none)').matches) return;
+            document.querySelectorAll('.card').forEach((card) => {
+                card.addEventListener('mousemove', (e) => {
+                    const r = card.getBoundingClientRect();
+                    card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+                    card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+                });
+            });
+        })();
+
+        // Крупные цифры набегают при появлении в кадре. Формат берём из разметки:
+        // пробелы, плюс и знак рубля возвращаем на место после анимации.
+        (function () {
+            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const nums = document.querySelectorAll('[data-count]');
+            if (!nums.length || reduce || !('IntersectionObserver' in window)) return;
+
+            const run = (el) => {
+                const raw = el.dataset.count;
+                const digits = raw.replace(/[^0-9]/g, '');
+                const target = parseInt(digits, 10);
+                if (!target) return;
+                const tail = raw.slice(raw.lastIndexOf(digits[digits.length - 1]) + 1);
+                const grouped = /\s/.test(raw);
+                const start = performance.now();
+                const dur = 1100;
+                const tick = (now) => {
+                    const t = Math.min(1, (now - start) / dur);
+                    const eased = 1 - Math.pow(1 - t, 3);
+                    const val = Math.round(target * eased);
+                    el.textContent = (grouped ? val.toLocaleString('ru-RU').replace(/ /g, ' ') : String(val)) + tail;
+                    if (t < 1) requestAnimationFrame(tick);
+                    else el.textContent = raw;
+                };
+                requestAnimationFrame(tick);
+            };
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    run(entry.target);
+                    io.unobserve(entry.target);
+                });
+            }, { threshold: 0.6 });
+            nums.forEach((n) => io.observe(n));
+        })();
+    </script>
+</body>
+</html>
