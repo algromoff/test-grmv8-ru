@@ -233,3 +233,8 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 .faq{border-bottom:1px solid var(--g2);padding:12px 0}
 .faq summary{font-weight:700;cursor:pointer}
 .faq p{margin:8px 0 0}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;border-radius:10px;display:block}
+.pinvid{position:relative;overflow:hidden}
+.pinvid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;opacity:.85}
+.pinvid .play{position:relative;z-index:1}
+img.ava{object-fit:cover;padding:0}
