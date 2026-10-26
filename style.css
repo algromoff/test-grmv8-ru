@@ -238,3 +238,30 @@ footer b{color:#fff;display:block;margin-bottom:8px}
 .pinvid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;opacity:.85}
 .pinvid .play{position:relative;z-index:1}
 img.ava{object-fit:cover;padding:0}
+
+/* reading widget: minutes left */
+.rw{position:fixed;right:22px;bottom:22px;z-index:45;display:flex;align-items:center;gap:8px;padding:6px 6px 6px 8px;background:rgba(253,252,249,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--g1);border-radius:999px;box-shadow:0 14px 34px -14px rgba(31,39,66,.35);font:600 13px Inter,sans-serif;color:var(--ink);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .4s,transform .4s}
+.rw.on{opacity:1;transform:none;pointer-events:auto}
+.rw-ring{width:34px;height:34px;flex:none;transform:rotate(-90deg)}
+.rw-ring circle{fill:none;stroke-width:3}
+.rw-ring .bg{stroke:var(--indigo-l)}
+.rw-ring .fg{stroke:var(--indigo);stroke-linecap:round;stroke-dasharray:94.25;stroke-dashoffset:94.25;transition:stroke-dashoffset .15s linear}
+.rw-time{white-space:nowrap;padding-right:6px}
+.rw-time b{color:var(--indigo);font-size:15px;margin-right:4px}
+.rw-top,.rw-cta{display:inline-flex;align-items:center;justify-content:center;height:36px;border-radius:999px;text-decoration:none;cursor:pointer;overflow:hidden;max-width:0;padding:0;opacity:0;transition:max-width .35s,opacity .3s,padding .35s,background .2s}
+.rw-top{border:1px solid var(--g2);background:none;color:var(--ink);font-size:16px}
+.rw-top:hover{border-color:var(--indigo);color:var(--indigo)}
+.rw-cta{background:var(--sand);color:var(--ink);font-weight:600;white-space:nowrap}
+.rw-cta:hover{background:var(--sand-d)}
+.rw.up .rw-top{max-width:36px;min-width:36px;opacity:1}
+.rw.cta .rw-cta{max-width:180px;padding:0 16px;opacity:1}
+@media (max-width:560px){.rw{right:14px;bottom:14px}.rw.cta .rw-cta{padding:0 12px}}
+@media (prefers-reduced-motion:reduce){.rw,.rw-ring .fg,.rw-top,.rw-cta{transition:none}}
+
+/* nav: longer "Найм без ошибок" label must stay on one line above the burger breakpoint */
+@media (max-width:1140px) and (min-width:1021px){.nav{gap:14px;flex-wrap:nowrap}.nav a{font-size:14px;white-space:nowrap}.top .phone{font-size:14px}}
+@media (max-width:1020px) and (min-width:821px){
+  .nav,.top .phone{display:none}
+  .burger{display:block}
+  .nav.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:72px;background:var(--paper);padding:16px 20px;border-bottom:1px solid var(--g1)}
+}
