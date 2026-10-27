@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Анна Громова | Психолог, нумеролог</title>
+<meta name="description" content="Психолог, нумеролог. Основатель школы. Выбери следующий шаг, чтобы изменить сценарии в отношениях и прийти к балансу.">
+<meta name="theme-color" content="#F3E7DC">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%238A1F3D'/><text x='50' y='54' font-family='sans-serif' font-weight='700' font-size='54' text-anchor='middle' dominant-baseline='middle' fill='%23F3E7DC'>А</text></svg>">
+
+<!-- Prodamus payment widget: the buttons below open it by their data-prodamusprice -->
+<script>
+  window.prodamusDomain = 'bekaif.payform.ru';
+  window.prodamusCurrency = 'rub';
+</script>
+<script src="https://widget.prodamus.ru/src/init.js" async></script>
+<link rel="stylesheet" href="https://widget.prodamus.ru/src/init.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=PT+Mono&family=Unbounded:wght@700&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* Hallmark · page: /link.html · shape: Link page (one column: the portrait, the name, the short about, three paid steps, the channels) · hero: Corridor · signature: the portrait as a tall garnet-edged card over the name set in Unbounded capitals · job: choose · imagery: the owner's portrait, 1
+ * sections: Corridor (portrait, name, roles) · Disclosure (about) · Stack (three paid steps and one link) · Pair (channels) · Footer (documents)
+ * fingerprint: Centred column|Hairline|Solid|Tightly cropped to the grid|None */
+/* Hallmark · waive 39b · the three payment tiles · each tile carries the step's name, its line and its price, and the Prodamus widget needs the whole tile to be the button */
+/* Hallmark · waive 44c · hero ends at 538 in a 30rem column · a link page read on a phone: the portrait, the name and the roles open it and the paid steps follow on the same screen */
+/* Hallmark · waive 59 · gaps of 64px between blocks · one 30rem column of a single list of steps, its blocks divided by hairlines instead of section gaps */
+/* Hallmark · reworded "..." to "…" twice in the about text · F2 three periods become the one ellipsis character */
+/* Hallmark · dropped the fade over the clipped about text · the teaser is now the whole first paragraph and the second opens below it */
+/* Hallmark · dropped the fluid-canvas element · it only carried the WebGL background */
+/* Hallmark · dropped https://cdn.tailwindcss.com · the styling runtime; the shared site.css replaces it */
+/* Hallmark · dropped "Психолог • Сексолог • Мастер телесных практик" as a head · it is a line of roles under the name, now a list */
+/* Hallmark · dropped "Мой lifestyle и инсайты каждый день:" as a head · a label over two channel buttons, now a plain line */
+/* Hallmark · dropped the WebGL fluid background and the Tailwind runtime · 33 a looping shader under every screen, and a styling runtime the shared system replaces */
+/* Hallmark · dropped the glass panel and its shadows · 31 a translucent card in a card over the moving background */
+/* Hallmark · dropped the Telegram and Instagram logo icons · 30 brand-coloured marks outside the palette; the labels already name the channels */
+/* Hallmark · dropped user-scalable=no from the viewport · the page must zoom */
+/* Hallmark · reworded "Психолог • Сексолог • Мастер телесных практик" to three items divided by hairlines · 63 bullet string */
+/* Hallmark · reworded "Урок-анализ ваших слепых зон • 2 500 ₽" to the line and the price on separate lines · 63 bullet string; the same for the other two buttons */
+/* Hallmark · reworded "Мой метод — это" to "Мой метод - это" and "учу этому — я так живу" to "учу этому - я так живу" · 19 the brand writes a hyphen */
+/* Hallmark · reworded "\"я всё сама\"" to "«я всё сама»" and "\"Разбор отношений\"" to "«Разбор отношений»" · 19 straight quotes */
+/* Hallmark · reworded the six "#" links of the Информация window to the school's own document pages · a link that went nowhere; «Реквизиты» and «Контакты» both open the contacts page */
+
+body { background: var(--color-paper); }
+.corridor { width: 100%; max-width: 30rem; margin-inline: auto; padding: var(--space-2xl) var(--gutter) var(--space-xl); display: flex; flex-direction: column; align-items: center; min-height: 100svh; }
+.hero { display: grid; justify-items: center; text-align: center; gap: var(--space-md); padding-bottom: var(--space-xl); }
+.portrait { width: 13rem; aspect-ratio: 5 / 6; border-radius: var(--radius-card); outline: 3px solid var(--color-accent); outline-offset: 4px; }
+.portrait > img { object-position: 50% 22%; }
+.hero h1 { font-size: clamp(2rem, 7vw, 2.75rem); line-height: 1.04; color: var(--color-ink); text-transform: uppercase; margin-top: var(--space-sm); }
+.roles { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2xs) var(--space-xs); font-size: 0.8125rem; font-weight: 500; color: var(--color-brass); }
+.roles li + li { padding-left: var(--space-xs); border-left: 1px solid var(--color-rule-2); }
+
+.about { width: 100%; padding-block: var(--space-lg); border-block: 1px solid var(--color-rule); }
+.about-inner { position: relative; }
+#aboutBlock { font-size: var(--text-md); line-height: 1.6; color: var(--color-ink-2); }
+#aboutBlock p + p { margin-top: var(--space-xs); }
+.about-toggle { display: none; }
+.js .about-toggle { display: inline-flex; }
+.js #aboutBlock:not(.open) #aboutMoreText { display: none; }
+#aboutOverlay { display: none; }
+.about-toggle { display: inline-flex; align-items: center; gap: var(--space-2xs); min-height: 44px; margin-top: var(--space-xs); padding: 0; border: 0; background: none; font: inherit; font-size: var(--text-sm); font-weight: 500; color: var(--color-accent); cursor: pointer; text-decoration: underline; text-underline-offset: 0.2em; }
+.about-toggle:hover { color: var(--color-accent-2); }
+.about-toggle:active { transform: translateY(1px); }
+.about-toggle:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+#aboutChevron { width: 1rem; height: 1rem; transition: transform var(--dur-med) var(--ease-out); }
+
+.steps { width: 100%; display: grid; gap: var(--space-sm); padding-block: var(--space-xl); }
+.pay { display: grid; justify-items: start; gap: var(--space-3xs); width: 100%; min-height: 52px; padding: var(--space-md) var(--space-lg); border: 1px solid var(--color-rule-2); border-radius: var(--radius-input); background: var(--color-paper-2); color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; transition: background var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out); }
+.pay .t { display: block; font-weight: 700; font-size: var(--text-md); line-height: 1.3; }
+.pay .d { display: block; font-size: var(--text-sm); color: var(--color-ink-2); }
+.pay .p { display: block; font-family: var(--font-outlier); font-variant-numeric: tabular-nums; font-size: var(--text-md); color: var(--color-accent); }
+.pay:hover { border-color: var(--color-ink); background: var(--color-paper); }
+.pay:active { transform: translateY(1px); }
+.pay:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.pay.lead-pay { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.pay.lead-pay .d { color: var(--color-field-ink-2); }
+.pay.lead-pay .p { color: var(--color-brass-light); }
+.pay.lead-pay:hover { background: var(--color-accent-2); border-color: var(--color-accent-2); }
+/* Prodamus listens on the button itself, so its inner lines must not take the click */
+[data-prodamusprice] * { pointer-events: none; }
+.donate { justify-self: center; margin-top: var(--space-xs); font-size: var(--text-sm); font-weight: 500; color: var(--color-ink-2); }
+.donate a { color: var(--color-accent); }
+.donate a:hover { color: var(--color-accent-2); }
+
+.channels { width: 100%; padding-top: var(--space-lg); border-top: 1px solid var(--color-rule); }
+.channels-title { font-family: var(--font-body); font-weight: 500; font-size: var(--text-sm); letter-spacing: 0; color: var(--color-muted); text-align: center; margin-bottom: var(--space-md); }
+.channel-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm); }
+.channel-pair .btn { width: 100%; }
+
+.link-foot { margin-top: auto; width: 100%; padding-top: var(--space-2xl); display: grid; justify-items: center; gap: var(--space-xs); text-align: center; font-size: var(--text-sm); color: var(--color-muted); }
+.info-btn { display: inline-flex; align-items: center; gap: var(--space-2xs); min-height: 44px; padding: 0 var(--space-sm); border: 0; background: none; font: inherit; font-weight: 500; color: var(--color-ink); cursor: pointer; text-decoration: underline; text-underline-offset: 0.2em; }
+.info-btn:hover { color: var(--color-accent); }
+.info-btn:active { transform: translateY(1px); }
+.info-btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.link-foot .meta-note { font-size: var(--text-xs, 0.75rem); max-width: 34ch; }
+
+.overlay { position: fixed; inset: 0; z-index: var(--z-modal); background: color-mix(in oklab, var(--color-night) 60%, transparent); }
+.modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: calc(var(--z-modal) + 1); width: calc(100% - 2 * var(--gutter)); max-width: 22rem; display: flex; flex-direction: column; gap: var(--space-md); padding: var(--space-lg); border-radius: var(--radius-card); background: var(--color-paper-2); border: 1px solid var(--color-rule); }
+.overlay.hidden, .modal.hidden { display: none; }
+.modal-head { display: flex; align-items: center; justify-content: space-between; }
+.modal h2 { font-size: var(--text-lg); color: var(--color-ink); }
+.modal-close { width: 44px; height: 44px; border: 1px solid var(--color-rule-2); border-radius: var(--radius-pill); background: none; font-size: var(--text-xl); line-height: 1; color: var(--color-ink); cursor: pointer; }
+.modal-close:hover { border-color: var(--color-ink); }
+.modal-close:active { transform: translateY(1px); }
+.modal-close:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.modal ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-rule); }
+.modal li a { display: flex; align-items: center; min-height: 44px; padding-block: var(--space-2xs); border-bottom: 1px solid var(--color-rule); color: var(--color-ink); text-decoration: none; }
+.modal li a:hover { color: var(--color-accent); }
+@media (prefers-reduced-motion: reduce) { #aboutChevron, .pay { transition: none; } }
+</style>
+</head>
+<body>
+<main class="corridor">
+
+  <section class="hero">
+    <figure class="photo warm portrait"><img src="anna.jpg" alt="Анна Громова" width="900" height="1200" fetchpriority="high"></figure>
+    <h1>Анна Громова</h1>
+    <ul class="roles" aria-label="Кто я">
+      <li>Психолог</li>
+      <li>Сексолог</li>
+      <li>Мастер телесных практик</li>
+    </ul>
+  </section>
+
+  <section class="about" aria-label="Обо мне">
+    <div class="about-inner">
+      <div id="aboutBlock">
+        <p>В 41 год благодаря телесным практикам я восстановила женское здоровье и родила второго ребенка от любимого мужчины в счастливом браке. Хотя еще недавно была классической достигаторшей «я всё сама»…</p>
+        <p id="aboutMoreText">…с полностью разрушенным контактом со своим телом. Я прошла путь от жизни на пределе к состоянию, где всё происходит из легкости и кайфа. Мой метод - это синергия психологии, сексологии и телесных практик. Я помогаю женщинам выходить из глубоких кризисов, возвращать свою чувственность и строить жизнь, в которой больше не нужно выживать. Я не просто учу этому - я так живу.</p>
+      </div>
+      <div id="aboutOverlay"></div>
+    </div>
+    <button type="button" class="about-toggle" onclick="toggleAbout()" aria-controls="aboutBlock" aria-expanded="false">
+      <span id="aboutBtnLabel">Читать далее</span>
+      <svg id="aboutChevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"></path></svg>
+    </button>
+  </section>
+
+  <section class="steps" aria-label="С чего начать">
+    <button type="button" data-prodamusprice="2500" class="pay lead-pay">
+      <span class="t">Персональный практикум «Разбор отношений»</span>
+      <span class="d">Урок-анализ ваших слепых зон</span>
+      <span class="p">2 500 ₽</span>
+    </button>
+    <button type="button" data-prodamusprice="3000" class="pay">
+      <span class="t">Курс «Формула Кайфа»</span>
+      <span class="d">7 дней самостоятельного обучения</span>
+      <span class="p">3 000 ₽</span>
+    </button>
+    <button type="button" data-prodamusprice="1490" class="pay">
+      <span class="t">Онлайн-практикум - Телесный класс</span>
+      <span class="d">Обучающее занятие для контакта с собой</span>
+      <span class="p">1 490 ₽</span>
+    </button>
+    <!-- A free amount goes straight to the payment form: an empty data-prodamusprice used to break the widget script -->
+    <p class="donate">Экспресс-практикум «<a href="https://bekaif.payform.ru/" target="_blank" rel="noopener">Формула отношений</a>»</p>
+  </section>
+
+  <section class="channels">
+    <p class="channels-title">Мой lifestyle и инсайты каждый день:</p>
+    <div class="channel-pair">
+      <a class="btn btn--quiet" href="https://t.me/bekaifru" target="_blank" rel="noopener noreferrer">Мой Telegram</a>
+      <a class="btn btn--quiet" href="https://www.instagram.com/luckyanni777/" target="_blank" rel="noopener noreferrer">Мой Instagram*</a>
+    </div>
+  </section>
+
+  <footer class="link-foot">
+    <button type="button" class="info-btn" onclick="openModal('modal-info')" aria-haspopup="dialog">Информация</button>
+    <p>&copy; 2026 Анна Громова. Все права защищены.</p>
+    <p class="meta-note">* Деятельность Meta Platforms Inc. (соцсети Facebook, Instagram) запрещена на территории РФ.</p>
+  </footer>
+</main>
+
+<div id="modal-overlay" class="overlay hidden" onclick="closeAllModals()"></div>
+<div id="modal-info" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-info-title">
+  <div class="modal-head">
+    <h2 id="modal-info-title">Информация</h2>
+    <button type="button" class="modal-close" onclick="closeAllModals()" aria-label="Закрыть">&times;</button>
+  </div>
+  <ul>
+    <li><a href="privacy/">Политика конфиденциальности</a></li>
+    <li><a href="terms/">Пользовательское соглашение</a></li>
+    <li><a href="offer/">Договор-оферта</a></li>
+    <li><a href="consent/">Согласие на обработку персональных данных</a></li>
+    <li><a href="contacts/">Реквизиты</a></li>
+    <li><a href="contacts/">Контакты</a></li>
+  </ul>
+</div>
+
+<script>
+  // "About me" disclosure: the first paragraph is the teaser, the second opens on demand
+  let isAboutExpanded = false;
+  function toggleAbout() {
+    const block = document.getElementById('aboutBlock');
+    const label = document.getElementById('aboutBtnLabel');
+    const chevron = document.getElementById('aboutChevron');
+    isAboutExpanded = !isAboutExpanded;
+    block.classList.toggle('open', isAboutExpanded);
+    document.querySelector('.about-toggle').setAttribute('aria-expanded', isAboutExpanded);
+    label.textContent = isAboutExpanded ? 'Свернуть' : 'Читать далее';
+    chevron.style.transform = isAboutExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+  }
+
+  // Modal windows
+  function openModal(modalId) {
+    document.getElementById('modal-overlay').classList.remove('hidden');
+    document.getElementById(modalId).classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAllModals() {
+    document.getElementById('modal-overlay').classList.add('hidden');
+    document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+      if (modal.id !== 'modal-overlay') modal.classList.add('hidden');
+    });
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllModals(); });
+</script>
+</body>
+</html>

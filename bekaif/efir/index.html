@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Формула кайфа - курс Анны Громовой. Запись эфира</title>
+<meta name="description" content="Как перестать воевать за отношения и снова почувствовать себя женщиной рядом с мужчиной. Курс Анны Громовой на четыре недели.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F3E7DC">
+<meta property="og:title" content="Формула кайфа - курс Анны Громовой">
+<meta property="og:description" content="Запись эфира «Почему он перестал тебя видеть» и курс на 4 недели.">
+<meta property="og:image" content="https://bekaif.ru/efir/poster.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%238A1F3D'/><text x='50' y='54' font-family='sans-serif' font-weight='700' font-size='54' text-anchor='middle' dominant-baseline='middle' fill='%23F3E7DC'>К</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=PT+Mono&family=Unbounded:wght@700&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* Hallmark · page: /efir/ · shape: Showcase (the recording first, then who it is for, the course, the weeks, the voices, the price, the full recording) · hero: Stage · signature: the owner's own broadcast playing large beside a four-word head · job: buy · imagery: the owner's broadcast recording, 2 players
+ * sections: Stage (the 9-minute cut) · Grid 3 (recognise yourself) · Split + Offer (the course) · Statement + Rows (why practice) · Index (four weeks) · Rows (what you work on) · Quotes (three voices) · Offer (the price) · Statement (Anna) · Showcase + Index (the full recording) · Rows (questions) · Band (close)
+ * fingerprint: Hanging|Asymmetric spans|Bleed-colour block|Solid|Tightly cropped to the grid|Fade-up stagger */
+/* Hallmark · waive 8 · the twelve blocks of the live broadcast page in their kept order · the redesign keeps the owner's funnel order (video first, price below, set 16.10) and changes every composition */
+/* Hallmark · waive 77 · "Анна Громова" at 1440 · the owner's two-sentence note about herself, set as a statement; no picture belongs to this block on the live page */
+/* Hallmark · dismissed 59 · every block of the live funnel page stays, the owner placed each one */
+/* Hallmark · dropped "Запись эфира Анны Громовой" · 54 hero eyebrow; it now stands beside the wordmark in the nav */
+/* Hallmark · dropped "Курс Анны Громовой" · 54 eyebrow; the course's own heading under it already names it */
+/* Hallmark · reworded "Начать можно сегодня · 4 недели · 20-30 минут в день" to three items divided by hairlines · 63 middle-dot string */
+/* Hallmark · dropped the unused timer styles · no timer is on the page */
+
+.hero { padding-block: var(--space-2xl) var(--space-3xl); min-height: calc(100svh - 72px); display: grid; align-items: center; }
+.stage-grid { display: grid; grid-template-columns: minmax(0, 2.75fr) minmax(0, 9.25fr); gap: var(--space-xl) var(--space-2xl); align-items: center; }
+.stage-text { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+.hero h1 { color: var(--color-accent); font-size: clamp(2.25rem, 2.4vw + 0.75rem, 3.25rem); line-height: 1.06; max-width: 10ch; }
+.hero .lead { font-size: var(--text-lead); line-height: 1.45; color: var(--color-ink-2); }
+.player { margin: 0; }
+.player video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-card); background: var(--color-night); }
+.player figcaption { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
+
+.cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xl) var(--gap-columns); }
+.cards3 .card { display: grid; gap: var(--space-sm); align-content: start; padding-top: var(--space-md); border-top: 2px solid var(--color-accent); }
+.cards3 h3 { font-size: var(--text-xl); }
+.cards3 p { color: var(--color-ink-2); max-width: 46ch; }
+.after-note { margin-top: var(--space-2xl); font-size: var(--text-lead); line-height: 1.45; max-width: 58ch; }
+
+.course-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); align-items: start; }
+.course-copy { grid-column: 1 / span 6; display: grid; gap: var(--space-lg); }
+.course-copy h2 { font-size: var(--text-section); line-height: 1.08; }
+.course-copy .lead { font-size: var(--text-lead); line-height: 1.45; color: var(--color-ink-2); max-width: 52ch; }
+.course-grid .offer { grid-column: 8 / span 5; }
+
+.offer { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-md); padding: var(--space-xl); border: 2px solid var(--color-accent); border-radius: var(--radius-card); }
+.offer h2 { font-size: var(--text-2xl); }
+.offer .price { font-family: var(--font-outlier); font-variant-numeric: tabular-nums; font-size: var(--text-3xl); line-height: 1; }
+.offer .who { color: var(--color-ink-2); }
+.offer .who a, .offer .bot a, .small a, .qa a { color: var(--color-accent); }
+.offer .btns { display: grid; gap: var(--space-xs); }
+.offer .btn { width: 100%; }
+.btn .l1, .btn .l2 { display: block; }
+.btn:has(.l2) { flex-direction: column; gap: 0; padding-block: var(--space-3xs); line-height: 1.15; }
+.btn .l2 { font-size: var(--text-sm); font-weight: 400; }
+.offer .bot { font-size: var(--text-sm); }
+.offer .meta { list-style: none; margin: 0; padding: var(--space-sm) 0 0; display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-md); font-size: var(--text-sm); color: var(--color-muted); border-top: 1px solid var(--color-rule); }
+.offer .meta li + li { padding-left: var(--space-md); border-left: 1px solid var(--color-rule-2); }
+.offer .fine { font-size: var(--text-sm); color: var(--color-muted); }
+
+.why-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); }
+.why-grid .lhs { grid-column: 1 / span 5; display: grid; gap: var(--space-lg); align-content: start; }
+.why-grid .lhs p { font-size: var(--text-lead); line-height: 1.45; }
+.why-grid .rhs { grid-column: 7 / span 6; }
+.why-grid .rhs > p { color: var(--color-muted); margin-bottom: var(--space-sm); }
+.plain { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-rule-2); }
+.plain li { padding-block: var(--space-md); border-bottom: 1px solid var(--color-rule-2); font-size: var(--text-md); max-width: 60ch; }
+
+.weeks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-rule); }
+.weeks li { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-sm) var(--gap-columns); align-items: baseline; padding-block: var(--space-lg); border-bottom: 1px solid var(--color-rule); }
+.weeks b { grid-column: 1 / span 3; font-family: var(--font-outlier); font-weight: 400; font-size: var(--text-xl); color: var(--color-accent); }
+.weeks span { grid-column: 4 / span 9; font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-xl); line-height: 1.25; }
+.weeks-note { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 62ch; }
+
+.work-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); }
+.work-grid h2 { grid-column: 1 / span 4; }
+.work-grid .plain { grid-column: 5 / span 8; }
+
+.quotes { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-2xl) var(--gap-columns); }
+.quotes blockquote { margin: 0; display: grid; gap: var(--space-sm); align-content: start; }
+.quotes blockquote:first-child { grid-column: 1 / span 7; grid-row: span 2; font-size: var(--text-lead); line-height: 1.5; }
+.quotes blockquote:not(:first-child) { grid-column: 9 / span 4; padding-top: var(--space-md); border-top: 1px solid var(--color-field-rule); font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-lg); line-height: 1.35; }
+.quotes cite { font-style: normal; font-family: var(--font-body); font-weight: 400; font-size: var(--text-sm); color: var(--color-field-ink-2); }
+.quotes-note { margin-top: var(--space-2xl); font-size: var(--text-sm); color: var(--color-field-ink-2); }
+
+.price-wrap { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); }
+.price-wrap .offer { grid-column: 2 / span 10; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md) var(--space-2xl); align-items: start; }
+.price-wrap .offer > .btns, .price-wrap .offer > .bot, .price-wrap .offer > .meta, .price-wrap .offer > .fine { grid-column: 2; }
+.price-wrap .offer > h2 { grid-column: 1; grid-row: 1; }
+.price-wrap .offer > .who { grid-column: 1; grid-row: 2; }
+.price-wrap .offer > .price { grid-column: 1; grid-row: 3 / span 3; font-size: clamp(3rem, 5vw, 5rem); font-variant-numeric: tabular-nums; }
+
+.anna { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); align-items: start; }
+.anna h2 { grid-column: 1 / span 4; }
+.anna .copy { grid-column: 5 / span 8; display: grid; gap: var(--space-md); }
+.anna .copy p:first-child { color: var(--color-ink-2); }
+.anna .copy p:last-child { font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-2xl); line-height: 1.3; max-width: 45ch; }
+
+.full-grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--space-xl) var(--space-2xl); align-items: start; }
+.full-grid .head { margin-bottom: var(--space-lg); grid-column: 1 / -1; }
+.full-grid video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-card); background: var(--color-night); }
+.toc { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-rule); counter-reset: tc; }
+.toc li { display: flex; justify-content: space-between; gap: var(--space-md); align-items: baseline; padding-block: var(--space-sm); border-bottom: 1px solid var(--color-rule); }
+.toc a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-accent); font-weight: 500; cursor: pointer; text-decoration: underline; text-underline-offset: 0.2em; }
+.toc a:hover { color: var(--color-accent-2); }
+.toc a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.toc .fig { color: var(--color-muted); white-space: nowrap; }
+.toc-note { margin-top: var(--space-md); font-size: var(--text-sm); color: var(--color-muted); }
+
+.faq-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); }
+.faq-grid h2 { grid-column: 1 / span 4; }
+.faq-grid .qa { grid-column: 5 / span 8; }
+
+.final-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); align-items: center; }
+.final-grid .big { grid-column: 1 / span 6; font-family: var(--font-outlier); font-size: clamp(3rem, 6vw, 6rem); line-height: 1; color: var(--color-night-ink); }
+.final-grid .offer { grid-column: 8 / span 5; border-color: var(--color-night-rule); }
+.final-grid .offer .meta { color: var(--color-night-ink-2); border-top-color: var(--color-night-rule); }
+.final-grid .offer .meta li + li { border-left-color: var(--color-night-rule); }
+.final-grid .offer .bot a { color: var(--color-brass-light); }
+
+.sticky { display: none; }
+@media (max-width: 60rem) {
+  .hero { min-height: 0; padding-block: var(--space-lg) var(--space-2xl); }
+  .stage-grid, .full-grid { grid-template-columns: minmax(0, 1fr); }
+  .stage-text { order: 2; }
+  .player { order: 1; }
+  .cards3 { grid-template-columns: minmax(0, 1fr); }
+  .course-copy, .course-grid .offer, .why-grid .lhs, .why-grid .rhs, .work-grid h2, .work-grid .plain, .quotes blockquote:first-child, .quotes blockquote:not(:first-child), .price-wrap .offer, .anna h2, .anna .copy, .faq-grid h2, .faq-grid .qa, .final-grid .big, .final-grid .offer { grid-column: 1 / -1; }
+  .quotes blockquote:first-child { grid-row: auto; }
+  .price-wrap .offer { grid-template-columns: minmax(0, 1fr); }
+  .price-wrap .offer > h2, .price-wrap .offer > .who, .price-wrap .offer > .price, .price-wrap .offer > .btns, .price-wrap .offer > .bot, .price-wrap .offer > .meta, .price-wrap .offer > .fine { grid-column: 1; grid-row: auto; }
+  .weeks b { grid-column: 1 / -1; }
+  .weeks span { grid-column: 1 / -1; }
+  .sticky { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-sticky); padding: var(--space-sm) var(--space-md) calc(var(--space-sm) + env(safe-area-inset-bottom)); background: var(--color-paper); border-top: 1px solid var(--color-rule); transition: transform var(--dur-short) var(--ease-out), visibility var(--dur-short); }
+  .sticky .btn { width: 100%; }
+  .js .sticky.off { transform: translateY(110%); visibility: hidden; }
+  body { padding-bottom: var(--space-3xl); }
+}
+@media (max-width: 40rem) {
+  .offer { padding: 0; border: 0; border-radius: 0; }
+  .offer .btn { font-size: 0.9375rem; padding-inline: var(--space-md); }
+}
+@media (prefers-reduced-motion: reduce) { .sticky { transition: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap bar">
+    <a class="logo" href="../" aria-label="Школа КАЙФа, на главную">Школа&nbsp;<b>КАЙФа</b> <span class="by">Запись эфира Анны Громовой</span></a>
+    <nav class="site-nav" aria-label="По странице">
+      <a href="#price">Курс</a>
+      <a href="#full">Полная запись</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. Первый экран: видео (владелец 16.10 12:19 - идут смотреть эфир, цена ниже) -->
+  <section class="hero">
+    <div class="wrap stage-grid">
+      <div class="stage-text">
+        <h1>9 главных минут эфира</h1>
+        <p class="lead">Почему мужчина начинает видеть в женщине противника - и что можно изменить уже завтра.</p>
+        <div class="actions"><a class="btn btn--quiet btn-alt" href="#full"><span class="l1">Смотреть полную запись эфира</span> <span class="l2">(84 мин)</span></a></div>
+      </div>
+      <figure class="player">
+        <video controls playsinline preload="metadata" poster="https://bekaif.ru/efir/poster.jpg" src="https://bekaif.ru/efir/short.mp4" aria-label="9 главных минут эфира"></video>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3. Узнаёшь себя -->
+  <section class="sec band-plate">
+    <div class="wrap">
+      <div class="head"><h2>Узнаёшь себя?</h2></div>
+      <div class="cards3">
+        <div class="card" data-reveal><h3>Живём как соседи</h3><p>Общий быт, общая кровать. Последний разговор не про счета и детей был так давно, что не помнишь когда.</p></div>
+        <div class="card" data-reveal><h3>Всё на мне</h3><p>Врачи, деньги, школа, подарки его маме - помнишь ты. «Ты у меня такая сильная», - говорит он. А опереться не на кого.</p></div>
+        <div class="card" data-reveal><h3>Он не слышит</h3><p>Любой разговор за пять минут превращается в претензии. Потом неделя тишины, и всё по кругу.</p></div>
+      </div>
+      <p class="after-note">Часто дело не только в его характере, а в сценарии, который сложился в отношениях: правота, контроль, обида. Аня называет это тремя войнами.</p>
+    </div>
+  </section>
+
+  <!-- 3а. Курс «Сама» - после видео и «Узнаёшь себя» (вечнозелёный, владелец 20.10) -->
+  <section class="sec">
+    <div class="wrap course-grid">
+      <div class="course-copy">
+        <h2>Как перестать воевать за отношения и снова почувствовать себя женщиной рядом с мужчиной</h2>
+        <p class="lead">«Формула кайфа» - четыре недели уроков и телесных практик Ани в закрытом Telegram-канале. Проходишь в своём темпе, 20-30 минут в день.</p>
+      </div>
+      <div class="offer">
+        <p class="price">8 990 ₽</p>
+        <p class="who">Все уроки и практики курса, доступ сразу после оплаты. Хочешь личную работу с Аней - смотри <a href="../formula/#pricing">форматы</a> «С&nbsp;Аней» и «ВИП».</p>
+        <div class="btns">
+          <a class="btn btn-main" href="https://bot.bekaif.ru/pay?p=formula_sama&amp;src=efir">Хочу на курс</a>
+          <a class="btn btn--quiet btn-alt" href="https://bot.bekaif.ru/pay?p=formula_gruppa&amp;src=efir"><span class="l1">С Аней - 14&nbsp;990&nbsp;₽:</span> <span class="l2">курс и личная сессия</span></a>
+        </div>
+        <p class="bot"><a href="tg://resolve?domain=Lucky_Anni_bot&amp;start=formula_site">Или открыть бот Ани в Telegram</a></p>
+        <ul class="meta"><li>Начать можно сегодня</li><li>4 недели</li><li>20-30 минут в день</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Почему практика -->
+  <section class="sec band-deep">
+    <div class="wrap why-grid">
+      <div class="lhs">
+        <h2>Почему не хватает «понять головой»</h2>
+        <p>Разговоры, книги, терпение у тебя уже были. Понимание приходит, а реакции остаются прежними: тело сжимается раньше, чем успеваешь подумать. Такие автоматизмы меняются практикой, день за днём.</p>
+      </div>
+      <div class="rhs">
+        <p>Поэтому в курсе:</p>
+        <ul class="plain">
+          <li>каждый день короткий урок или практика - 20-30 минут</li>
+          <li>телесные практики и две медитации, чтобы менялись реакции, а не только понимание</li>
+          <li>уроки можно пересматривать сколько угодно раз</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Программа -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="head"><h2>Что будет в курсе</h2></div>
+      <ul class="weeks">
+        <li data-reveal><b>Неделя 1.</b> <span>Перестать бороться и не начать терпеть.</span></li>
+        <li data-reveal><b>Неделя 2.</b> <span>Разобраться с обидой и научиться «сдаваться» из силы, а не из слабости.</span></li>
+        <li data-reveal><b>Неделя 3.</b> <span>Вернуть себе кайф и благодарность.</span></li>
+        <li data-reveal><b>Неделя 4.</b> <span>Принимать - и при этом не терять себя.</span></li>
+      </ul>
+      <p class="weeks-note">14 видеоуроков от 5 до 25 минут, телесные практики и две медитации. Все уроки открыты сразу. Удобный ритм - три урока в неделю, в остальные дни практика.</p>
+    </div>
+  </section>
+
+  <!-- 6. Над чем работаем -->
+  <section class="sec band-plate">
+    <div class="wrap work-grid">
+      <h2>Над чем ты будешь работать</h2>
+      <ul class="plain">
+        <li>опираться на себя - и разрешать ему заботиться</li>
+        <li>просить так, чтобы это звучало как просьба, а не как претензия</li>
+        <li>замечать, когда включается война, и выходить из неё раньше ссоры</li>
+        <li>вернуть телу расслабление, а себе - желание</li>
+        <li>спокойно решить, что дальше с отношениями, в любую сторону</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. Кейсы -->
+  <section class="sec band-field">
+    <div class="wrap">
+      <div class="head"><h2>Истории участниц</h2></div>
+      <div class="quotes">
+        <blockquote>«Мне всегда нужно было быть правой и доказывать мужчинам что-то. Расслабиться получалось, только когда совсем не оставалось сил. На курсе я позволила себе расслабиться и довериться. И самое неожиданное - изменился бывший муж, от которого я вообще ничего не ждала. Стал сам давать больше денег, а я смогла из мягкости попросить помощи.»<cite>Елена, выпускница курса</cite></blockquote>
+        <blockquote>«Я рекомендую этот интенсив всем подругам. Это того стоит. Это реально меняет жизнь.»<cite>Светлана В., 29 лет</cite></blockquote>
+        <blockquote>«Спасибо за то, что дала мне разрешение быть счастливой. Это звучит странно, но я действительно получила разрешение от вас.»<cite>Дарья П., 31 год</cite></blockquote>
+      </div>
+      <p class="quotes-note">Результаты у всех свои и зависят от участия.</p>
+    </div>
+  </section>
+
+  <!-- 8. Цена -->
+  <section class="sec band-deep" id="price">
+    <div class="wrap price-wrap">
+      <div class="offer">
+        <h2>«Формула кайфа» - Сама</h2>
+        <p class="who">Все уроки и практики курса, доступ сразу после оплаты. Хочешь личную работу с Аней - смотри <a href="../formula/#pricing">форматы</a> «С&nbsp;Аней» и «ВИП».</p>
+        <p class="price">8 990 ₽</p>
+        <div class="btns">
+          <a class="btn btn-main" href="https://bot.bekaif.ru/pay?p=formula_sama&amp;src=efir">Хочу на курс</a>
+          <a class="btn btn--quiet btn-alt" href="https://bot.bekaif.ru/pay?p=formula_gruppa&amp;src=efir"><span class="l1">С Аней - 14&nbsp;990&nbsp;₽:</span> <span class="l2">курс и личная сессия</span></a>
+        </div>
+        <p class="bot"><a href="tg://resolve?domain=Lucky_Anni_bot&amp;start=formula_site">Или открыть бот Ани в Telegram</a></p>
+        <ul class="meta"><li>Начать можно сегодня</li><li>4 недели</li><li>20-30 минут в день</li></ul>
+        <div class="btns">
+          <a class="btn btn--quiet btn-alt" href="https://t.me/LubovForte?text=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D1%83%D1%80%D1%81%20%D0%90%D0%BD%D0%BD%D1%8B%20%C2%AB%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0%20%D0%9A%D0%B0%D0%B9%D1%84%D0%B0%C2%BB%20%D1%81%20%D1%80%D0%B0%D1%81%D1%81%D1%80%D0%BE%D1%87%D0%BA%D0%BE%D0%B9">Нужна рассрочка</a>
+          <a class="btn btn--quiet btn-alt" href="https://bot.bekaif.ru/pay?p=formula_vip&amp;src=efir">Хочу личное сопровождение - ВИП</a>
+        </div>
+        <p class="fine">Кнопка ведёт на страницу оплаты, Telegram и VPN не нужны: достаточно почты.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Об Ане -->
+  <section class="sec">
+    <div class="wrap anna">
+      <h2>Анна Громова</h2>
+      <div class="copy">
+        <p>Психолог, сексолог, мастер телесных практик. Восемь лет в телесных практиках - начинала скептиком.</p>
+        <p>«Я сама прошла путь от сильной, волевой, но очень несчастной женщины до женщины, которая кайфует от своего тела, отношений и каждодневных мелочей. „Формулу кайфа“ я собрала из своего пути и работы с десятками женщин».</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Полная запись -->
+  <section class="sec band-plate" id="full">
+    <div class="wrap full-grid">
+      <div class="head"><h2>Полная запись эфира, 84 минуты</h2></div>
+      <video id="fullv" controls playsinline preload="none" poster="https://bekaif.ru/efir/poster.jpg" src="https://bekaif.ru/efir/full.mp4" aria-label="Полная запись эфира"></video>
+      <div>
+        <ol class="toc">
+          <li><a href="#fullv" data-t="1324">Три войны: правота, контроль, обида</a> <span class="fig">22:04</span></li>
+          <li><a href="#fullv" data-t="3578">Что сделать завтра</a> <span class="fig">59:38</span></li>
+          <li><a href="#fullv" data-t="4009">Истории Елены и Светы</a> <span class="fig">1:06:49</span></li>
+        </ol>
+        <p class="small toc-note">Курс «Формула кайфа» - 8 990 ₽. <a href="#price">Перейти к оплате</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ -->
+  <section class="sec">
+    <div class="wrap faq-grid">
+      <h2>Частые вопросы</h2>
+      <div class="qa">
+        <details><summary>У меня мало времени</summary><p>20-30 минут в день. Уроки короткие, от 5 до 25 минут, практики - в удобное время.</p></details>
+        <details><summary>А если не успею в своём темпе?</summary><p>Уроки можно пересматривать сколько угодно раз - вернёшься к ним, когда будет время.</p></details>
+        <details><summary>Муж не будет в этом участвовать</summary><p>Его участие не нужно. Работа строится вокруг твоих реакций, твоих границ и того, как ты разговариваешь.</p></details>
+        <details><summary>Я сейчас одна</summary><p>Курс про твоё состояние. Война бывает и с прошлым, и с собой - начинать всё равно с себя.</p></details>
+        <details><summary>Можно оплатить частями?</summary><p>Да. Напиши Любови, <a href="https://t.me/LubovForte?text=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D1%83%D1%80%D1%81%20%D0%90%D0%BD%D0%BD%D1%8B%20%C2%AB%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0%20%D0%9A%D0%B0%D0%B9%D1%84%D0%B0%C2%BB%20%D1%81%20%D1%80%D0%B0%D1%81%D1%81%D1%80%D0%BE%D1%87%D0%BA%D0%BE%D0%B9">@LubovForte</a>, она оформит рассрочку.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Финал -->
+  <section class="sec band-night">
+    <div class="wrap final-grid">
+      <p class="big">8 990 ₽</p>
+      <div class="offer">
+        <div class="btns">
+          <a class="btn btn-main" href="https://bot.bekaif.ru/pay?p=formula_sama&amp;src=efir">Хочу на курс</a>
+          <a class="btn btn--quiet btn-alt" href="https://bot.bekaif.ru/pay?p=formula_gruppa&amp;src=efir"><span class="l1">С Аней - 14&nbsp;990&nbsp;₽:</span> <span class="l2">курс и личная сессия</span></a>
+        </div>
+        <p class="bot"><a href="tg://resolve?domain=Lucky_Anni_bot&amp;start=formula_site">Или открыть бот Ани в Telegram</a></p>
+        <ul class="meta"><li>Начать можно сегодня</li><li>4 недели</li><li>20-30 минут в день</li></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="mast">Школа <b>КАЙФа</b></p>
+    <div class="foot-grid">
+      <div>
+        <p>Школа женского кайфа, трансформации и живых отношений.</p>
+      </div>
+      <div>
+        <h3 class="lbl">Контакты</h3>
+        <a href="mailto:anna@bekaif.ru">anna@bekaif.ru</a>
+        <a href="https://t.me/bekaifru" target="_blank" rel="noopener noreferrer">Telegram: Школа КАЙФа</a>
+      </div>
+      <div>
+        <h3 class="lbl">Документы</h3>
+        <ul>
+          <li><a href="../privacy/">Политика конфиденциальности</a></li>
+          <li><a href="../offer/">Публичная оферта</a></li>
+          <li><a href="../refund/">Условия возврата</a></li>
+          <li><a href="../terms/">Пользовательское соглашение</a></li>
+          <li><a href="../consent/">Согласие на обработку данных</a></li>
+          <li><a href="../cookies/">Политика cookie</a></li>
+          <li><a href="../contacts/">Контакты и реквизиты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>© 2026 Школа КАЙФа Анны Громовой.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn btn-main" href="https://bot.bekaif.ru/pay?p=formula_sama&amp;src=efir">Хочу на курс</a></div>
+
+<script>
+  // Sticky CTA hides while any video is on screen, so it never covers the player controls
+  (function () {
+    var bar = document.querySelector('.sticky');
+    if (!bar || !('IntersectionObserver' in window)) return;
+    var shown = new Set();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? shown.add(e.target) : shown.delete(e.target); });
+      bar.classList.toggle('off', shown.size > 0);
+    });
+    document.querySelectorAll('video').forEach(function (v) { io.observe(v); });
+  })();
+  // Chapter links seek the full recording.
+  document.querySelectorAll('.toc a').forEach(function (a) {
+    function seek(e) {
+      if (e) e.preventDefault();
+      var v = document.getElementById('fullv');
+      v.preload = 'metadata'; v.currentTime = +a.dataset.t; v.play();
+      v.scrollIntoView({ block: 'center' });
+    }
+    a.addEventListener('click', seek);
+  });
+  // One calm reveal for the blocks marked to rise in.
+  (function () {
+    var io = new IntersectionObserver(function (en, obs) {
+      en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+  })();
+  // Header hairline once the page moves.
+  (function () {
+    var h = document.getElementById('siteHeader');
+    function on() { h.classList.toggle('scrolled', window.scrollY > 24); }
+    window.addEventListener('scroll', on, { passive: true }); on();
+  })();
+</script>
+</body>
+</html>

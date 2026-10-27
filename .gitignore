@@ -1,1 +1,5 @@
 _kit/
+
+# Hallmark service files of the bekaif test copy
+bekaif/.hallmark/
+bekaif/**/.hallmark/
