@@ -1,0 +1,23 @@
+:root {
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2rem, 3.2vw + 0.5rem, 3.25rem); --text-display: clamp(2.375rem, 4vw + 0.75rem, 4.375rem);
+  --text-section: clamp(1.75rem, 2.2vw + 1rem, 3.125rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
+  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+  /* brand: «Визуальный стандарт Ани Громовой» 10.10.2026 (песок, графит, гранат, латунь; Unbounded, Golos Text, PT Mono) */
+  --color-paper: oklch(93.4% 0.020 65); --color-paper-2: oklch(97% 0.013 71); --color-paper-3: oklch(89.9% 0.027 69);
+  --color-ink: oklch(24.5% 0.008 31); --color-ink-2: oklch(38.1% 0.015 37); --color-muted: oklch(46.5% 0.016 32);
+  --color-rule: oklch(83% 0.032 67); --color-rule-2: oklch(70% 0.03 60);
+  --color-accent: oklch(42.5% 0.142 10); --color-accent-2: oklch(36.5% 0.121 8); --color-accent-ink: oklch(93.4% 0.020 65); --color-focus: oklch(46.4% 0.175 12);
+  --color-field: oklch(42.5% 0.142 10); --color-field-ink: oklch(93.4% 0.020 65); --color-field-ink-2: oklch(86% 0.035 50); --color-field-rule: oklch(55% 0.11 12);
+  --color-night: oklch(17.8% 0.007 34); --color-night-ink: oklch(93.4% 0.020 65); --color-night-ink-2: oklch(78% 0.02 60); --color-night-rule: oklch(32% 0.012 34);
+  --color-brass: oklch(52% 0.094 72); --color-brass-light: oklch(79.5% 0.098 77);
+  --font-display: "Unbounded", "Montserrat", ui-sans-serif, sans-serif; --font-body: "Golos Text", ui-sans-serif, system-ui, sans-serif; --font-outlier: "PT Mono", ui-monospace, monospace;
+  --display-weight: 700;
+  --radius-card: 20px; --radius-input: 12px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: none;
+  --tracking-display: -0.01em;
+}
